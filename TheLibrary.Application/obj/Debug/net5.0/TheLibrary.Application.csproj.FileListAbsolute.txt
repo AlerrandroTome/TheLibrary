@@ -1,0 +1,12 @@
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Application\bin\Debug\net5.0\TheLibrary.Application.deps.json
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Application\bin\Debug\net5.0\TheLibrary.Application.dll
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Application\bin\Debug\net5.0\ref\TheLibrary.Application.dll
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Application\bin\Debug\net5.0\TheLibrary.Application.pdb
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Application\obj\Debug\net5.0\TheLibrary.Application.csprojAssemblyReference.cache
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Application\obj\Debug\net5.0\TheLibrary.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Application\obj\Debug\net5.0\TheLibrary.Application.AssemblyInfoInputs.cache
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Application\obj\Debug\net5.0\TheLibrary.Application.AssemblyInfo.cs
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Application\obj\Debug\net5.0\TheLibrary.Application.csproj.CoreCompileInputs.cache
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Application\obj\Debug\net5.0\TheLibrary.Application.dll
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Application\obj\Debug\net5.0\ref\TheLibrary.Application.dll
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Application\obj\Debug\net5.0\TheLibrary.Application.pdb
