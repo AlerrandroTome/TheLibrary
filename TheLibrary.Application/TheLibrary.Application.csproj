@@ -7,8 +7,16 @@
 
   <ItemGroup>
     <Folder Include="Extensions\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheLibrary.Core\TheLibrary.Core.csproj" />
+    <ProjectReference Include="..\TheLibrary.Domain\TheLibrary.Domain.csproj" />
+    <ProjectReference Include="..\TheLibrary.Infrastructure\TheLibrary.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

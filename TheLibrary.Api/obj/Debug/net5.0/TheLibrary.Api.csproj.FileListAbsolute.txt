@@ -71,7 +71,6 @@ D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\AutoMapper.Ex
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Microsoft.AspNetCore.OData.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Microsoft.OData.Core.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Microsoft.OData.Edm.dll
-D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Microsoft.OData.ModelBuilder.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Microsoft.OpenApi.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Microsoft.Spatial.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -83,3 +82,9 @@ D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\obj\Debug\net5.0\TheLibrary.Ap
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\obj\Debug\net5.0\ref\TheLibrary.Api.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\obj\Debug\net5.0\TheLibrary.Api.pdb
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\obj\Debug\net5.0\TheLibrary.Api.genruntimeconfig.cache
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Castle.Core.dll
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\TheLibrary.Application.dll
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\TheLibrary.Domain.dll
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\TheLibrary.Application.pdb
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\TheLibrary.Domain.pdb

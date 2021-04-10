@@ -11,7 +11,7 @@ namespace TheLibrary.Api.Middlewares
         {
             context.Result = new JsonResult( new
             {
-                context.Exception.Message
+                Error = context.Exception.Message
             });
 
             context.HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;

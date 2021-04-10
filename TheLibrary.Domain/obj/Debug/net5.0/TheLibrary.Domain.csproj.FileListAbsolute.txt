@@ -10,3 +10,6 @@ D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Domain\obj\Debug\net5.0\TheLibrary
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Domain\obj\Debug\net5.0\TheLibrary.Domain.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Domain\obj\Debug\net5.0\ref\TheLibrary.Domain.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Domain\obj\Debug\net5.0\TheLibrary.Domain.pdb
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Domain\bin\Debug\net5.0\TheLibrary.Core.dll
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Domain\bin\Debug\net5.0\TheLibrary.Core.pdb
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Domain\obj\Debug\net5.0\TheLibrary.Domain.csproj.CopyComplete

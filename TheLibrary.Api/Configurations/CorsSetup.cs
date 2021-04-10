@@ -8,8 +8,8 @@ namespace TheLibrary.Infrastructure.Data.Configurations
         {
             app.UseCors(options => options
                         .AllowAnyOrigin()
-                       .AllowAnyMethod()
-                       .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
             );
         }
     }

@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.OData;
+﻿using Microsoft.AspNet.OData.Builder;
+using Microsoft.AspNet.OData.Extensions;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Net.Http.Headers;
 using Microsoft.OData.Edm;
-using Microsoft.OData.ModelBuilder;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -14,11 +16,31 @@ namespace TheLibrary.Api.Configurations
     {
         public static void AddOdataSetup(this IServiceCollection services)
         {
-            services.AddOData(opt =>
+            services.AddOData();
+
+            services.AddMvcCore(options =>
             {
-                opt.AddModel("odata", GetEdmModel());
-                opt.Expand().Filter().SkipToken().SetMaxTop(100).Count().OrderBy().Select();
+                options.OutputFormatters.OfType<OutputFormatter>().Where(x => x.SupportedMediaTypes.Count == 0).ToList().ForEach(outputFormatter =>
+                {
+                    outputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
+                });
+
+                options.InputFormatters.OfType<InputFormatter>().Where(x => x.SupportedMediaTypes.Count == 0).ToList().ForEach(inputFormatter =>
+                {
+                    inputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
+                });
+            });
+        }
+
+        public static void UseOdataSetup(this IApplicationBuilder app)
+        {
+            app.UseEndpoints(opt =>
+            {
+                opt.EnableDependencyInjection();
+                opt.MapODataRoute("odata", "odata", GetEdmModel());
+                opt.Expand().Filter().SkipToken().Count().OrderBy().Select().MaxTop(100);
                 opt.SetTimeZoneInfo(TimeZoneInfo.FindSystemTimeZoneById("SA Eastern Standard Time"));
+                //opt.MapControllers();
             });
         }
 

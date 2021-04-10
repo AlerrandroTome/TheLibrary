@@ -1,20 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using TheLibrary.Api.Configurations;
-using TheLibrary.Core.Shared;
 using TheLibrary.Infrastructure.Data.Configurations;
 
 namespace TheLibrary.Api
@@ -22,18 +13,17 @@ namespace TheLibrary.Api
     public class Startup
     {
         public IConfiguration Configuration { get; }
-        private readonly string connString;
 
-        public Startup(IConfiguration configuration, IOptions<ConnectionsString> options)
+        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            connString = options.Value.ConnString;
         }
-
 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddJsonSetup();
+
+            services.AddRouting();
 
             services.AddOdataSetup();
 
@@ -41,20 +31,28 @@ namespace TheLibrary.Api
 
             services.AddDependencyInjectionSetup();
 
-            services.AddDatabaseSetup(connString);
+            services.AddDatabaseSetup(Configuration);
 
-            services.AddAutoMapper(new [] { Assembly.GetExecutingAssembly() });
+            services.AddAutoMapper(typeof(Infrastructure.AutoMapper.AutoMapper));
 
             services.AddMiddlewareSetup();
 
             services.AddFluentValidationSetup();
 
-            services.AddCors();
+            services.AddControllers();
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TheLibrary.Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { 
+                    Title = "The Library API", 
+                    Version = "v1", 
+                    Description = "Documentation of TheLibraryApi." 
+                });
             });
+
+            services.AddHttpClient();
+
+            services.AddCors();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -66,20 +64,17 @@ namespace TheLibrary.Api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("api/v1/swagger.json", "TheLibrary.Api"));
-
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseOdataSetup();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TheLibraryApi v1"));
         }
     }
 }

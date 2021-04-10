@@ -11,13 +11,13 @@ namespace TheLibrary.Api.Middlewares
         {
             if (!context.ModelState.IsValid)
             {
-                var erros = context.ModelState.Where(w => w.Value.Errors.Count > 0)
+                var errors = context.ModelState.Where(w => w.Value.Errors.Count > 0)
                                               .ToDictionary(w => w.Key, w => w.Value.Errors.Select(w => w.ErrorMessage))
                                               .ToList();
 
                 context.Result = new BadRequestObjectResult(new
                 {
-                    erros = erros.SelectMany(w => w.Value).ToList()
+                    errors = errors.SelectMany(w => w.Value).ToList()
                 });
 
                 return;

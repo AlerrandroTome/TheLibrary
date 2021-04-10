@@ -8,7 +8,7 @@ namespace TheLibrary.Api.Configurations
     {
         public static void AddAppSettingsSetup(this IServiceCollection service, IConfiguration configuration)
         {
-            service.Configure<ConnectionsString>(configuration.GetSection("ConnectionStrings"));
+            service.Configure<ConnectionsString>(configuration.GetSection("ConnectionStrings").GetSection("ConnString"));
         }
     }
 }
