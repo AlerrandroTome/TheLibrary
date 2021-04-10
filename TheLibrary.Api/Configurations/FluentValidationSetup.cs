@@ -10,7 +10,7 @@ namespace TheLibrary.Api.Configurations
         {
             services.AddMvc().AddFluentValidation(options => {
                 options.RegisterValidatorsFromAssemblyContaining<Startup>();
-                options.ValidatorOptions.LanguageManager.Culture = CultureInfo.InvariantCulture;
+                //options.ValidatorOptions.LanguageManager.Culture = CultureInfo.CreateSpecificCulture("pt-br");
             });
         }
     }
