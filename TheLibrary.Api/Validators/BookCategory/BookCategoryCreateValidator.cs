@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using TheLibrary.Core.DTOs.BookCategory;
+using TheLibrary.Domain.DTOs.BookCategory;
 
 namespace TheLibrary.Application.Validators.BookCategory
 {

@@ -1,6 +1,5 @@
 ﻿using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
-using System.Globalization;
 
 namespace TheLibrary.Api.Configurations
 {

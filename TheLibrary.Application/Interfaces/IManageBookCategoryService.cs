@@ -1,6 +1,5 @@
-﻿using System;
-using TheLibrary.Core.DTOs.BookCategory;
-using TheLibrary.Core.Interfaces;
+﻿using TheLibrary.Core.Interfaces;
+using TheLibrary.Domain.DTOs.BookCategory;
 using TheLibrary.Domain.Entities;
 
 namespace TheLibrary.Application.Interfaces

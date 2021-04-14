@@ -88,3 +88,4 @@ D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\TheLibrary.Ap
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\TheLibrary.Domain.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\TheLibrary.Application.pdb
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\TheLibrary.Domain.pdb
+D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

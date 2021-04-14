@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using TheLibrary.Application.Interfaces;
-using TheLibrary.Core.DTOs.BookCategory;
+using TheLibrary.Domain.DTOs.BookCategory;
 using TheLibrary.Domain.Entities;
 using TheLibrary.Infrastructure.Data.Context;
 using TheLibrary.Infrastructure.UnitOfWork;

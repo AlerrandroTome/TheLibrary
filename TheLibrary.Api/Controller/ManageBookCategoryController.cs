@@ -1,14 +1,12 @@
 ﻿using Microsoft.AspNet.OData;
 using Microsoft.AspNet.OData.Routing;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
 using TheLibrary.Application.Interfaces;
-using TheLibrary.Core.DTOs.BookCategory;
 using TheLibrary.Core.Interfaces;
-using TheLibrary.Infrastructure.Data.Context;
+using TheLibrary.Domain.DTOs.BookCategory;
 
 namespace TheLibrary.Api.Controller
 {
@@ -16,6 +14,7 @@ namespace TheLibrary.Api.Controller
     [ApiExplorerSettings]
     [Route("api/[controller]")]
     [ODataRoutePrefix("BookCategory")]
+    [Authorize]
     public class ManageBookCategoryController : ODataController, IControllerBase<BookCategoryCreateDTO, BookCategoryUpdateDTO>
     {
         private readonly IManageBookCategoryService _service;

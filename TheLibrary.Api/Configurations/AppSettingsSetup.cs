@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TheLibrary.Core.Shared;
+using TheLibrary.Infrastructure.Configurations;
 
 namespace TheLibrary.Api.Configurations
 {
@@ -8,7 +8,8 @@ namespace TheLibrary.Api.Configurations
     {
         public static void AddAppSettingsSetup(this IServiceCollection service, IConfiguration configuration)
         {
-            service.Configure<ConnectionsString>(configuration.GetSection("ConnectionStrings").GetSection("ConnString"));
+            service.Configure<ConnectionStrings>(configuration.GetSection("ConnectionStrings").GetSection("ConnString"));
+            service.Configure<JwtSettings>(configuration.GetSection("JwtSettings").GetSection("Secret"));
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using TheLibrary.Core.DTOs.BookCategory;
+using TheLibrary.Domain.DTOs.BookCategory;
 using TheLibrary.Domain.Entities;
 
 namespace TheLibrary.Infrastructure.AutoMapper
