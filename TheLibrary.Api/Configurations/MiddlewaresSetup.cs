@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using TheLibrary.Api.Middlewares;
+using TheLibrary.Infrastructure.Middlewares;
 
 namespace TheLibrary.Api.Configurations
 {

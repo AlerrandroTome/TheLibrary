@@ -24,8 +24,10 @@ namespace TheLibrary.Api.Configurations
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key: Encoding.ASCII.GetBytes(secretValue)),
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
+                    //ValidateIssuer = true,
+                    //ValidateAudience = true,
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
                     RequireExpirationTime = true,
                     ValidateLifetime = true
                 };

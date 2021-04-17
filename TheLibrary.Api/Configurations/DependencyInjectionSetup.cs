@@ -10,7 +10,11 @@ namespace TheLibrary.Api.Configurations
         public static void AddDependencyInjectionSetup(this IServiceCollection services)
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<IManageBookCategoryService, ManageBookCategoryService>();
+            services.AddScoped<IManagerBookCategoryService, ManagerBookCategoryService>();
+            services.AddScoped<IManagerLoginService, ManagerLoginService>();
+            services.AddScoped<IManagerUserService, ManagerUserService>();
+            services.AddScoped<ITokenService, TokenService>();
+
         }
     }
 }

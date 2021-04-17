@@ -9,7 +9,7 @@ namespace TheLibrary.Core.Interfaces
         where CreateDTO : class where UpdateDTO : class where Entity : EntityBase
     {
         Task Create(CreateDTO dto);
-        Task  Update(UpdateDTO dto);
+        Task<Entity> Update(UpdateDTO dto);
         Task Delete(Guid id);
         IQueryable<Entity> Get();
     }

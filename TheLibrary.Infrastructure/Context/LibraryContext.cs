@@ -1,7 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using System;
-using System.Linq;
 using TheLibrary.Domain.Entities;
 
 namespace TheLibrary.Infrastructure.Data.Context
@@ -12,6 +9,7 @@ namespace TheLibrary.Infrastructure.Data.Context
         { }
 
         public DbSet<BookCategory> BookCategories { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

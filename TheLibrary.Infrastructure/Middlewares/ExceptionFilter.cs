@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Net;
 
-namespace TheLibrary.Api.Middlewares
+namespace TheLibrary.Infrastructure.Middlewares
 {
     public class ExceptionFilter : IExceptionFilter
     {

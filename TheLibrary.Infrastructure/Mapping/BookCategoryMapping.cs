@@ -12,10 +12,10 @@ namespace TheLibrary.Infrastructure.Mapping
             builder.HasKey(w => w.Id);
 
             builder.Property(w => w.Title).IsRequired().HasColumnType("varchar(100)");
-            builder.Property(w => w.InclusionDate).IsRequired().HasColumnType("datetime");
+            builder.Property(w => w.InclusionDate).IsRequired().HasColumnType("datetime2");
             builder.Property(w => w.Active).IsRequired().HasColumnType("bit");
 
-            builder.Property(w => w.LastChangeDate).HasColumnType("datetime");
+            builder.Property(w => w.LastChangeDate).HasColumnType("datetime2");
         }
     }
 }

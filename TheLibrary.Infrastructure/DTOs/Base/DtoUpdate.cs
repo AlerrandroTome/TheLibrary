@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace TheLibrary.Domain.DTOs.Base
+namespace TheLibrary.Infrastructure.DTOs.Base
 {
-    public abstract class DTOUpdate
+    public abstract class DtoUpdate
     {
         public Guid Id { get; set; }
         public DateTime LastChangeDate { get; } = DateTime.Now;

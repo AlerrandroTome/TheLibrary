@@ -20,7 +20,7 @@ namespace TheLibrary.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionStrings = new ConnectionStrings();
+            var connectionStrings = new ConnStringSettings();
             Configuration.Bind(key: nameof(connectionStrings), connectionStrings);
 
             var jwtSettings = new JwtSettings();

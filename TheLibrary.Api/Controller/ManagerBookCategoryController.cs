@@ -6,7 +6,7 @@ using System;
 using System.Threading.Tasks;
 using TheLibrary.Application.Interfaces;
 using TheLibrary.Core.Interfaces;
-using TheLibrary.Domain.DTOs.BookCategory;
+using TheLibrary.Infrastructure.DTOs.BookCategory;
 
 namespace TheLibrary.Api.Controller
 {
@@ -15,11 +15,11 @@ namespace TheLibrary.Api.Controller
     [Route("api/[controller]")]
     [ODataRoutePrefix("BookCategory")]
     [Authorize]
-    public class ManageBookCategoryController : ODataController, IControllerBase<BookCategoryCreateDTO, BookCategoryUpdateDTO>
+    public class ManagerBookCategoryController : ODataController, IControllerBase<BookCategoryCreateDTO, BookCategoryUpdateDTO>
     {
-        private readonly IManageBookCategoryService _service;
+        private readonly IManagerBookCategoryService _service;
 
-        public ManageBookCategoryController(IManageBookCategoryService service)
+        public ManagerBookCategoryController(IManagerBookCategoryService service)
         {
             _service = service;
         }
