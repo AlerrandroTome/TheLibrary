@@ -17,12 +17,14 @@ namespace TheLibrary.Api.Configurations
                     Description = "Documentation of TheLibraryApi."
                 });
 
-                c.AddSecurityDefinition(name: "Bearer", new OpenApiSecurityScheme
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
-                    Description = "JWT Authorization",
-                    Name = "Bearer Auth",
+                    Name = "Authorization",
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
                     In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.ApiKey
+                    Type = SecuritySchemeType.ApiKey,
+                    Description = "Authentication Token of Library",
                 });
 
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement 
@@ -32,8 +34,8 @@ namespace TheLibrary.Api.Configurations
                         {
                             Reference = new OpenApiReference
                             {
-                                Id = "Bearer",
                                 Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer",
                             }
                         },
                         new string[] { }

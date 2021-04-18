@@ -1,5 +1,6 @@
 ﻿using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Globalization;
 
 namespace TheLibrary.Api.Configurations
 {
@@ -9,7 +10,7 @@ namespace TheLibrary.Api.Configurations
         {
             services.AddMvc().AddFluentValidation(options => {
                 options.RegisterValidatorsFromAssemblyContaining<Startup>();
-                //options.ValidatorOptions.LanguageManager.Culture = CultureInfo.CreateSpecificCulture("pt-br");
+                options.ValidatorOptions.LanguageManager.Culture = CultureInfo.CreateSpecificCulture("en");
             });
         }
     }

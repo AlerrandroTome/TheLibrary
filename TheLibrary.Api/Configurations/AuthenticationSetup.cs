@@ -2,12 +2,13 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using TheLibrary.Infrastructure.Configurations;
 
 namespace TheLibrary.Api.Configurations
 {
     public static class AuthenticationSetup
     {
-        public static void AddAuthenticationSetup(this IServiceCollection services, string secretValue)
+        public static void AddAuthenticationSetup(this IServiceCollection services, string secretValue, JwtSettings jwtSettings)
         {
             services.AddAuthentication(auth =>
             {
@@ -17,20 +18,13 @@ namespace TheLibrary.Api.Configurations
             })
             .AddJwtBearer(jwt =>
             {
-
-                jwt.RequireHttpsMetadata = false;
+                var parameters = jwt.TokenValidationParameters;
                 jwt.SaveToken = true;
-                jwt.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key: Encoding.ASCII.GetBytes(secretValue)),
-                    //ValidateIssuer = true,
-                    //ValidateAudience = true,
-                    ValidateIssuer = false,
-                    ValidateAudience = false,
-                    RequireExpirationTime = true,
-                    ValidateLifetime = true
-                };
+                parameters.ValidAudience = jwtSettings.Audience;
+                parameters.ValidIssuer = jwtSettings.Issuer;
+                parameters.ValidateIssuerSigningKey = true;
+                parameters.IssuerSigningKey = new SymmetricSecurityKey(key: Encoding.ASCII.GetBytes(secretValue));
+                parameters.ValidateLifetime = true;
             });
         }
     }

@@ -46,7 +46,7 @@ namespace TheLibrary.Api
 
             services.AddControllers();
 
-            services.AddAuthenticationSetup(jwtSettings.Secret);
+            services.AddAuthenticationSetup(jwtSettings.Secret, jwtSettings);
 
             services.AddSwaggerSetup();
 

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using TheLibrary.Infrastructure.DTOs.Base;
+using TheLibrary.Infrastructure.DTOs.UserAddress;
 
 namespace TheLibrary.Infrastructure.DTOs.User
 {
@@ -10,11 +12,7 @@ namespace TheLibrary.Infrastructure.DTOs.User
         public string Login { get; set; }
         public string Password { get; set; }
         public DateTime BirthDate { get; set; }
-        public string CPFCNPJ { get; set; }
-
-        /*public string Cep { get; set; }
-        public string Address { get; set; }
-        public int Number { get; set; }
-        public string Complement { get; set; }*/
+        public string Identification { get; set; }
+        public ICollection<UserAddressDTO> Addresses { get; set; } = new List<UserAddressDTO>();
     }
 }

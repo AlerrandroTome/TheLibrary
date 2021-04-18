@@ -10,11 +10,11 @@ using TheLibrary.Infrastructure.DTOs.BookCategory;
 
 namespace TheLibrary.Api.Controller
 {
+    [Authorize]
     [ApiController]
     [ApiExplorerSettings]
     [Route("api/[controller]")]
     [ODataRoutePrefix("BookCategory")]
-    [Authorize]
     public class ManagerBookCategoryController : ODataController, IControllerBase<BookCategoryCreateDTO, BookCategoryUpdateDTO>
     {
         private readonly IManagerBookCategoryService _service;

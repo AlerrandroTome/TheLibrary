@@ -22,6 +22,7 @@ namespace TheLibrary.Application.Services
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(jwt.Secret);
+            var expirationDate = DateTime.Parse($"{DateTime.Now.AddDays(1).ToString("dd/MM/yyyy")} 00:00:00");
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]
@@ -30,10 +31,14 @@ namespace TheLibrary.Application.Services
                     new Claim("Login", user.Login),
                     new Claim("FirstName", user.FirstName),
                     new Claim("LastName", user.LastName),
-                    new Claim("Active", user.Active.ToString())
+                    new Claim("Active", user.Active.ToString()),
+                    new Claim("ExpirationDate", expirationDate.ToString("dd/MM/yyyy HH:mm:ss"))
                 }),
-                Expires = DateTime.Parse($"{DateTime.Now.AddDays(1).ToString("dd/MM/yyyy")} 00:00:00"),
+                Expires = expirationDate,
+                NotBefore = DateTime.Now,
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
+                Audience = jwt.Audience,
+                Issuer = jwt.Issuer
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);

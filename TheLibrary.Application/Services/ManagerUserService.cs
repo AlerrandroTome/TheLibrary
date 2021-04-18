@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TheLibrary.Application.Interfaces;
@@ -33,12 +35,22 @@ namespace TheLibrary.Application.Services
         public async Task Create(UserCreateDTO dto)
         {
             var entity = _mapper.Map<User>(dto);
+
+            foreach (var address in dto.Addresses)
+            {
+                var entityAddress = _mapper.Map<UserAddress>(address);
+                entityAddress.UserId = entity.Id;
+                entity.Addresses.Add(entityAddress);
+            }
+
             await _uow.Repository<User>(_context).Create(entity);
         }
 
         public async Task Delete(Guid id)
         {
-            var entity = await _uow.Repository<User>(_context).Get(w => w.Id == id);
+            var entity = await _uow.Repository<User>(_context).Get(w => w.Id == id, new[] { "Addresses" });
+
+            _context.RemoveRange(entity.Addresses);
             await _uow.Repository<User>(_context).Delete(entity);
         }
 
@@ -46,9 +58,25 @@ namespace TheLibrary.Application.Services
 
         public async Task<User> Update(UserUpdateDTO dto)
         {
-            var entity = await _uow.Repository<User>(_context).Get(w => w.Id == dto.Id);
+            var entity = await _uow.Repository<User>(_context).Get(w => w.Id == dto.Id, new[] { "Addresses" });
+
+            foreach (var address in entity.Addresses)
+            {
+                _context.Remove(address);
+            }
+
             entity = _mapper.Map(dto, entity);
+            entity.Addresses = new List<UserAddress>();
+
+            foreach(var address in dto.Addresses)
+            {
+                var newEntity = _mapper.Map<UserAddress>(address);
+                newEntity.UserId = entity.Id;
+                _context.Add(newEntity);
+            }
+
             await _uow.Repository<User>(_context).Update(entity);
+
             return entity;
         }
     }

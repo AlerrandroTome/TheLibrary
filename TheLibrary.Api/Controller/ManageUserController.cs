@@ -10,11 +10,11 @@ using TheLibrary.Infrastructure.DTOs.User;
 
 namespace TheLibrary.Api.Controller
 {
+    [Authorize]
     [ApiController]
     [ApiExplorerSettings]
-    [Route("api/[controller]")]
     [ODataRoutePrefix("User")]
-    [Authorize]
+    [Route("api/[controller]")]
     public class ManageUserController : ODataController, IControllerBase<UserCreateDTO, UserUpdateDTO>
     {
         private readonly IManagerUserService _service;

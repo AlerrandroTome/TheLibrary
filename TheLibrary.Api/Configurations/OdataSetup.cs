@@ -40,7 +40,6 @@ namespace TheLibrary.Api.Configurations
                 opt.MapODataRoute("odata", "odata", GetEdmModel());
                 opt.Expand().Filter().SkipToken().Count().OrderBy().Select().MaxTop(100);
                 opt.SetTimeZoneInfo(TimeZoneInfo.FindSystemTimeZoneById("SA Eastern Standard Time"));
-                //opt.MapControllers();
             });
         }
 
