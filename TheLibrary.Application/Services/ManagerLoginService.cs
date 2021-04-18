@@ -24,7 +24,7 @@ namespace TheLibrary.Application.Services
         public async Task<string> Login(LoginDTO credentials)
         {
             //credentials.Password = credentials.Password.Atob();
-            var user = await _uow.Repository<User>(_contexto).Get(w => w.Login == credentials.Login && w.Password == credentials.Password );
+            var user = await _uow.Repository<User>(_contexto).Get(w => w.Login.Equals(credentials.Login) && w.Password.Equals(credentials.Password));
             
             if (user != null)
             {
@@ -32,7 +32,7 @@ namespace TheLibrary.Application.Services
             }
             else
             {
-                throw new ApplicationException("Usuário e/ou senha incorreto(s).");
+                throw new ApplicationException("Username or password is wrong.");
             }
         }
     }
