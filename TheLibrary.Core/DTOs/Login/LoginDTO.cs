@@ -1,4 +1,4 @@
-﻿namespace TheLibrary.Infrastructure.DTOs.Login
+﻿namespace TheLibrary.Core.DTOs.Login
 {
     public class LoginDTO
     {

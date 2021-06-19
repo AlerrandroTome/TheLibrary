@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using TheLibrary.Infrastructure.DTOs.Login;
+using TheLibrary.Core.DTOs.Login;
 
 namespace TheLibrary.Api.Validators.Login
 {

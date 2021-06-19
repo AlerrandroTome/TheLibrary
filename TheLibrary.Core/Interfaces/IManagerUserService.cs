@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using TheLibrary.Core.Interfaces;
-using TheLibrary.Infrastructure.DTOs.User;
+using TheLibrary.Core.DTOs.User;
 using TheLibrary.Infrastructure.Entities;
 
-namespace TheLibrary.Application.Interfaces
+namespace TheLibrary.Core.Interfaces
 {
     public interface IManagerUserService : IBaseService<User, UserCreateDTO, UserUpdateDTO>
     {

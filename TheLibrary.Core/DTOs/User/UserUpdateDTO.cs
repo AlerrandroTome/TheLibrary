@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using TheLibrary.Infrastructure.DTOs.UserAddress;
+using TheLibrary.Core.DTOs.Base;
+using TheLibrary.Core.DTOs.UserAddress;
 
-namespace TheLibrary.Infrastructure.DTOs.User
+namespace TheLibrary.Core.DTOs.User
 {
-    public class UserCreateDTO
+    public class UserUpdateDTO : DtoUpdate
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
-using TheLibrary.Infrastructure.DTOs.BookCategory;
-using TheLibrary.Infrastructure.DTOs.User;
-using TheLibrary.Infrastructure.DTOs.UserAddress;
+using TheLibrary.Core.DTOs.BookCategory;
+using TheLibrary.Core.DTOs.User;
+using TheLibrary.Core.DTOs.UserAddress;
+using TheLibrary.Core.Entities;
 using TheLibrary.Infrastructure.Entities;
 
 namespace TheLibrary.Infrastructure.AutoMapper

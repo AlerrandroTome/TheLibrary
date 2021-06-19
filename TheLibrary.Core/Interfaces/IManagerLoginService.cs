@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using TheLibrary.Infrastructure.DTOs.Login;
+using TheLibrary.Core.DTOs.Login;
 
-namespace TheLibrary.Application.Interfaces
+namespace TheLibrary.Core.Interfaces
 {
     public interface IManagerLoginService
     {

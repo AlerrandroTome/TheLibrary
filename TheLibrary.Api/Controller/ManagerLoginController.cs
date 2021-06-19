@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using TheLibrary.Application.Interfaces;
-using TheLibrary.Infrastructure.DTOs.Login;
+using TheLibrary.Core.DTOs.Login;
+using TheLibrary.Core.Interfaces;
 
 namespace TheLibrary.Api.Controller
 {

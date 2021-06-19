@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using TheLibrary.Application.Interfaces;
+using TheLibrary.Core.DTOs.Login;
+using TheLibrary.Core.Interfaces;
 using TheLibrary.Infrastructure.Data.Context;
-using TheLibrary.Infrastructure.DTOs.Login;
 using TheLibrary.Infrastructure.Entities;
 using TheLibrary.Infrastructure.UnitOfWork;
 

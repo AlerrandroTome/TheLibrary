@@ -4,9 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TheLibrary.Application.Interfaces;
+using TheLibrary.Core.DTOs.User;
+using TheLibrary.Core.Entities;
+using TheLibrary.Core.Interfaces;
 using TheLibrary.Infrastructure.Data.Context;
-using TheLibrary.Infrastructure.DTOs.User;
 using TheLibrary.Infrastructure.Entities;
 using TheLibrary.Infrastructure.UnitOfWork;
 

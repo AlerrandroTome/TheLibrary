@@ -4,9 +4,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
-using TheLibrary.Application.Interfaces;
+using TheLibrary.Core.DTOs.User;
 using TheLibrary.Core.Interfaces;
-using TheLibrary.Infrastructure.DTOs.User;
 
 namespace TheLibrary.Api.Controller
 {

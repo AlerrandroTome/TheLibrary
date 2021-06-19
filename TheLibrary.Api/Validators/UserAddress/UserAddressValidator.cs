@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using TheLibrary.Infrastructure.DTOs.UserAddress;
+using TheLibrary.Core.DTOs.UserAddress;
 
 namespace TheLibrary.Api.Validators.UserAddress
 {

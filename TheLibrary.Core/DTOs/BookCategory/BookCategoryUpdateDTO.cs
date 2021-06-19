@@ -1,6 +1,6 @@
-﻿using TheLibrary.Infrastructure.DTOs.Base;
+﻿using TheLibrary.Core.DTOs.Base;
 
-namespace TheLibrary.Infrastructure.DTOs.BookCategory
+namespace TheLibrary.Core.DTOs.BookCategory
 {
     public class BookCategoryUpdateDTO : DtoUpdate
     {

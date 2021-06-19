@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using TheLibrary.Infrastructure.DTOs.User;
+using TheLibrary.Core.DTOs.User;
 
 namespace TheLibrary.Api.Validators.User
 {

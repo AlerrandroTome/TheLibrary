@@ -4,9 +4,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
-using TheLibrary.Application.Interfaces;
+using TheLibrary.Core.DTOs.BookCategory;
 using TheLibrary.Core.Interfaces;
-using TheLibrary.Infrastructure.DTOs.BookCategory;
 
 namespace TheLibrary.Api.Controller
 {

@@ -3,7 +3,7 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using TheLibrary.Application.Interfaces;
+using TheLibrary.Core.Interfaces;
 using TheLibrary.Infrastructure.Configurations;
 using TheLibrary.Infrastructure.Entities;
 

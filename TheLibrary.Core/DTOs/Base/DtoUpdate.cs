@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TheLibrary.Infrastructure.DTOs.Base
+namespace TheLibrary.Core.DTOs.Base
 {
     public abstract class DtoUpdate
     {

@@ -1,4 +1,4 @@
-﻿namespace TheLibrary.Infrastructure.DTOs.BookCategory
+﻿namespace TheLibrary.Core.DTOs.BookCategory
 {
     public class BookCategoryCreateDTO
     {
