@@ -2033,7 +2033,6 @@
           "FluentValidation": "10.0.1",
           "System.IdentityModel.Tokens.Jwt": "6.10.2",
           "TheLibrary.Core": "1.0.0",
-          "TheLibrary.Domain": "1.0.0",
           "TheLibrary.Infrastructure": "1.0.0"
         },
         "runtime": {
@@ -2054,17 +2053,6 @@
           "TheLibrary.Core.dll": {}
         }
       },
-      "TheLibrary.Domain/1.0.0": {
-        "dependencies": {
-          "TheLibrary.Core": "1.0.0"
-        },
-        "runtime": {
-          "TheLibrary.Domain.dll": {}
-        },
-        "compile": {
-          "TheLibrary.Domain.dll": {}
-        }
-      },
       "TheLibrary.Infrastructure/1.0.0": {
         "dependencies": {
           "AutoMapper": "10.1.1",
@@ -2073,8 +2061,7 @@
           "Microsoft.EntityFrameworkCore": "6.0.0-preview.1.21102.2",
           "Microsoft.EntityFrameworkCore.Proxies": "5.0.5",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.0-preview.1.21102.2",
-          "TheLibrary.Core": "1.0.0",
-          "TheLibrary.Domain": "1.0.0"
+          "TheLibrary.Core": "1.0.0"
         },
         "runtime": {
           "TheLibrary.Infrastructure.dll": {}
@@ -4900,11 +4887,6 @@
       "sha512": ""
     },
     "TheLibrary.Core/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "TheLibrary.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

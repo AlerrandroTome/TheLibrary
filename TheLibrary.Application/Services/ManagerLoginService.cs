@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using TheLibrary.Application.Interfaces;
-using TheLibrary.Domain.Entities;
 using TheLibrary.Infrastructure.Data.Context;
 using TheLibrary.Infrastructure.DTOs.Login;
+using TheLibrary.Infrastructure.Entities;
 using TheLibrary.Infrastructure.UnitOfWork;
 
 namespace TheLibrary.Application.Services

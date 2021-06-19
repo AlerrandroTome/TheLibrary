@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TheLibrary.Core.Entities;
 using TheLibrary.Core.Interfaces;
 
-namespace TheLibrary.Domain.Entities
+namespace TheLibrary.Infrastructure.Entities
 {
     public class User : EntityBase, IODataEntity
     {

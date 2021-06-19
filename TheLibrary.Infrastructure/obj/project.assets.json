@@ -1962,19 +1962,6 @@
         "runtime": {
           "bin/placeholder/TheLibrary.Core.dll": {}
         }
-      },
-      "TheLibrary.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "TheLibrary.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/TheLibrary.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TheLibrary.Domain.dll": {}
-        }
       }
     }
   },
@@ -6602,11 +6589,6 @@
       "type": "project",
       "path": "../TheLibrary.Core/TheLibrary.Core.csproj",
       "msbuildProject": "../TheLibrary.Core/TheLibrary.Core.csproj"
-    },
-    "TheLibrary.Domain/1.0.0": {
-      "type": "project",
-      "path": "../TheLibrary.Domain/TheLibrary.Domain.csproj",
-      "msbuildProject": "../TheLibrary.Domain/TheLibrary.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6618,8 +6600,7 @@
       "Microsoft.EntityFrameworkCore.Proxies >= 5.0.5",
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.5",
-      "TheLibrary.Core >= 1.0.0",
-      "TheLibrary.Domain >= 1.0.0"
+      "TheLibrary.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6657,9 +6638,6 @@
           "projectReferences": {
             "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj": {
               "projectPath": "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj"
-            },
-            "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Domain\\TheLibrary.Domain.csproj": {
-              "projectPath": "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Domain\\TheLibrary.Domain.csproj"
             }
           }
         }
@@ -6720,7 +6698,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

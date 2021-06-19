@@ -30,6 +30,7 @@ namespace TheLibrary.Api.Controller
         virtual public IActionResult Get() => Ok(_service.Get());
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Create(BookCategoryCreateDTO dto)
         {
             await _service.Create(dto);

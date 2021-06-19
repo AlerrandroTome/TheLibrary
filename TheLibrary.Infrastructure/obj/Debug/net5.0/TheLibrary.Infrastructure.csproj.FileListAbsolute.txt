@@ -28,5 +28,3 @@ D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Infrastructure\obj\Debug\net5.0\Th
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Infrastructure\bin\Debug\net5.0\TheLibrary.Core.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Infrastructure\bin\Debug\net5.0\TheLibrary.Core.pdb
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Infrastructure\obj\Debug\net5.0\TheLibrary.Infrastructure.csproj.CopyComplete
-D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Infrastructure\bin\Debug\net5.0\TheLibrary.Domain.dll
-D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Infrastructure\bin\Debug\net5.0\TheLibrary.Domain.pdb

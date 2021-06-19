@@ -15,8 +15,7 @@
           "Microsoft.EntityFrameworkCore.Proxies": "5.0.5",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.5",
-          "TheLibrary.Core": "1.0.0",
-          "TheLibrary.Domain": "1.0.0"
+          "TheLibrary.Core": "1.0.0"
         },
         "runtime": {
           "TheLibrary.Infrastructure.dll": {}
@@ -1303,14 +1302,6 @@
         "runtime": {
           "TheLibrary.Core.dll": {}
         }
-      },
-      "TheLibrary.Domain/1.0.0": {
-        "dependencies": {
-          "TheLibrary.Core": "1.0.0"
-        },
-        "runtime": {
-          "TheLibrary.Domain.dll": {}
-        }
       }
     }
   },
@@ -2224,11 +2215,6 @@
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
     "TheLibrary.Core/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "TheLibrary.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

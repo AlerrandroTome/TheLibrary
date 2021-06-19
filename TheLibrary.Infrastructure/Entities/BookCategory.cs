@@ -1,7 +1,8 @@
-﻿using TheLibrary.Core.Entities;
+﻿using System.ComponentModel;
+using TheLibrary.Core.Entities;
 using TheLibrary.Core.Interfaces;
 
-namespace TheLibrary.Domain.Entities
+namespace TheLibrary.Infrastructure.Entities
 {
     public class BookCategory : EntityBase, IODataEntity
     {

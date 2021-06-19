@@ -4,8 +4,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using TheLibrary.Application.Interfaces;
-using TheLibrary.Domain.Entities;
 using TheLibrary.Infrastructure.Configurations;
+using TheLibrary.Infrastructure.Entities;
 
 namespace TheLibrary.Application.Services
 {

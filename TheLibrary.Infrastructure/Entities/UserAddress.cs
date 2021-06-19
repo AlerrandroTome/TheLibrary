@@ -1,7 +1,7 @@
 ﻿using System;
 using TheLibrary.Core.Entities;
 
-namespace TheLibrary.Domain.Entities
+namespace TheLibrary.Infrastructure.Entities
 {
     public class UserAddress : EntityBase
     {

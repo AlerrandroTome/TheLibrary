@@ -6,17 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="10.0.1" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.10.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TheLibrary.Core\TheLibrary.Core.csproj" />
-    <ProjectReference Include="..\TheLibrary.Domain\TheLibrary.Domain.csproj" />
     <ProjectReference Include="..\TheLibrary.Infrastructure\TheLibrary.Infrastructure.csproj" />
   </ItemGroup>
 

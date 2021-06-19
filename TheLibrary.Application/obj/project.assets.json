@@ -1968,19 +1968,6 @@
           "bin/placeholder/TheLibrary.Core.dll": {}
         }
       },
-      "TheLibrary.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "TheLibrary.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/TheLibrary.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TheLibrary.Domain.dll": {}
-        }
-      },
       "TheLibrary.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1991,8 +1978,7 @@
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore.Proxies": "5.0.5",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.5",
-          "TheLibrary.Core": "1.0.0",
-          "TheLibrary.Domain": "1.0.0"
+          "TheLibrary.Core": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TheLibrary.Infrastructure.dll": {}
@@ -6702,11 +6688,6 @@
       "path": "../TheLibrary.Core/TheLibrary.Core.csproj",
       "msbuildProject": "../TheLibrary.Core/TheLibrary.Core.csproj"
     },
-    "TheLibrary.Domain/1.0.0": {
-      "type": "project",
-      "path": "../TheLibrary.Domain/TheLibrary.Domain.csproj",
-      "msbuildProject": "../TheLibrary.Domain/TheLibrary.Domain.csproj"
-    },
     "TheLibrary.Infrastructure/1.0.0": {
       "type": "project",
       "path": "../TheLibrary.Infrastructure/TheLibrary.Infrastructure.csproj",
@@ -6718,7 +6699,6 @@
       "FluentValidation >= 10.0.1",
       "System.IdentityModel.Tokens.Jwt >= 6.10.2",
       "TheLibrary.Core >= 1.0.0",
-      "TheLibrary.Domain >= 1.0.0",
       "TheLibrary.Infrastructure >= 1.0.0"
     ]
   },
@@ -6757,9 +6737,6 @@
           "projectReferences": {
             "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj": {
               "projectPath": "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj"
-            },
-            "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Domain\\TheLibrary.Domain.csproj": {
-              "projectPath": "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Domain\\TheLibrary.Domain.csproj"
             },
             "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj": {
               "projectPath": "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj"
@@ -6801,7 +6778,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

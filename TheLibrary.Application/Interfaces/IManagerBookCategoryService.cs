@@ -1,6 +1,6 @@
 ﻿using TheLibrary.Core.Interfaces;
-using TheLibrary.Domain.Entities;
 using TheLibrary.Infrastructure.DTOs.BookCategory;
+using TheLibrary.Infrastructure.Entities;
 
 namespace TheLibrary.Application.Interfaces
 {

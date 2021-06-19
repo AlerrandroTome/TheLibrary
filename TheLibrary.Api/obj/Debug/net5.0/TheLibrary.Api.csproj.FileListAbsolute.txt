@@ -85,9 +85,7 @@ D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\obj\Debug\net5.0\TheLibrary.Ap
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Castle.Core.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxies.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\TheLibrary.Application.dll
-D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\TheLibrary.Domain.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\TheLibrary.Application.pdb
-D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\TheLibrary.Domain.pdb
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Api\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll

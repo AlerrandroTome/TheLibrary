@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TheLibrary.Domain.Entities;
+using TheLibrary.Infrastructure.Entities;
 
 namespace TheLibrary.Infrastructure.Mapping
 {

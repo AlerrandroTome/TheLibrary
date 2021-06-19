@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using TheLibrary.Domain.Entities;
+using TheLibrary.Infrastructure.Entities;
 
 namespace TheLibrary.Application.Interfaces
 {
