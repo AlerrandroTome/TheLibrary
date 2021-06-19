@@ -3,7 +3,7 @@ Uma API simples sobre uma biblioteca para praticar os estudos de arquitetura de 
 Projeto em desenvolvimento.
 
 O projeto é uma web api em .net Core 5 que utiliza:   
-	- Clean Architecture
+	- Clean Architecture;  
 	- Padrão Repository com uma abordagem de repositório genérico;  
 	- Padrão UnitOfWork para fazer o mapeamento das entidades com seu Repository;  
 	- Cada entidade possui sua Service;  
@@ -24,7 +24,7 @@ A simple API on a library to practice the software architecture studies and stru
 Project under development.
 
 The project is a .net Core 5 web api that uses:  
-	- Clean Architecture
+	- Clean Architecture;  
 	- Repository standard with a generic repository approach;  
 	- UnitOfWork standard for mapping entities with their Repository;  
 	- Each entity has its Service;  
