@@ -5,7 +5,7 @@ using TheLibrary.Infrastructure.Entities;
 
 namespace TheLibrary.Core.Interfaces
 {
-    public interface IManagerUserService : IBaseService<User, UserCreateDTO, UserUpdateDTO>
+    public interface IManageUserService : IBaseService<User, UserCreateDTO, UserUpdateDTO>
     {
         Task BlockUser(Guid userId, Guid loggedUserId);
     }

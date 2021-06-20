@@ -9,11 +9,11 @@ namespace TheLibrary.Api.Validators.Login
         {
             RuleFor(w => w.Login).NotEmpty().NotNull().MinimumLength(5);
             RuleFor(w => w.Password).NotEmpty()
-                                    .WithMessage("A senha não pode ser vazia.")
+                                    .WithMessage("É necessário informar a senha.")
                                     .NotNull()
-                                    .WithMessage("A senha não pode ser nula.")
+                                    .WithMessage("É necessário informar a senha.")
                                     .Length(4, 8)
-                                    .WithMessage("A senha tem que ter entre {MinLength} e {MaxLength}. Você digitou {TotalLength}.");
+                                    .WithMessage("A senha tem que ter entre {MinLength} e {MaxLength} caracteres. Você digitou {TotalLength}.");
         }
     }
 }

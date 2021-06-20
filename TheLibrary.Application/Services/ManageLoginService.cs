@@ -8,13 +8,13 @@ using TheLibrary.Infrastructure.UnitOfWork;
 
 namespace TheLibrary.Application.Services
 {
-    public class ManagerLoginService : IManagerLoginService
+    public class ManageLoginService : IManageLoginService
     {
         private readonly IUnitOfWork _uow;
         private readonly LibraryContext _contexto;
         private readonly ITokenService _tokenService;
 
-        public ManagerLoginService(IUnitOfWork uow, LibraryContext contexto, ITokenService tokenService)
+        public ManageLoginService(IUnitOfWork uow, LibraryContext contexto, ITokenService tokenService)
         {
             _uow = uow;
             _contexto = contexto;

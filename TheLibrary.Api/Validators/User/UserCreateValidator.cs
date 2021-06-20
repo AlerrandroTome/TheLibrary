@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using TheLibrary.Api.Validators.UserAddress;
 using TheLibrary.Core.DTOs.User;
 
 namespace TheLibrary.Api.Validators.User
@@ -12,34 +13,36 @@ namespace TheLibrary.Api.Validators.User
                                  .MinimumLength(5);
             
             RuleFor(w => w.FirstName).NotEmpty()
-                                     .WithMessage("O nome não pode ser vazio.")
+                                     .WithMessage("É necessário informar o nome.")
                                      .NotNull()
-                                     .WithMessage("O nome não pode ser nulo.");
+                                     .WithMessage("É necessário informar o nome.");
 
             RuleFor(w => w.LastName).NotEmpty()
-                                    .WithMessage("O sobrenome não pode ser vazio.")
+                                    .WithMessage("É necessário informar o sobrenome.")
                                     .NotNull()
-                                    .WithMessage("o sobrenome não pode ser nulo.");
+                                    .WithMessage("É necessário informar o sobrenome.");
 
             RuleFor(w => w.Password).NotEmpty()
-                                    .WithMessage("A senha não pode ser vazia.")
+                                    .WithMessage("É necessário informar a senha.")
                                     .NotNull()
-                                    .WithMessage("A senha não pode ser nula.")
+                                    .WithMessage("É necessário informar a senha.")
                                     .Length(4, 8)
-                                    .WithMessage("A senha tem que ter entre {MinLength} e {MaxLength}. Você digitou {TotalLength}.");
+                                    .WithMessage("A senha tem que ter entre {MinLength} e {MaxLength} caracteres. Você digitou {TotalLength}.");
 
             RuleFor(w => w.Identification).NotEmpty()
-                                          .WithMessage("O CPF não pode ser vazio.")
+                                          .WithMessage("É necessário informar o CPF.")
                                           .NotNull()
-                                          .WithMessage("O CPF não pode ser nulo.");
+                                          .WithMessage("É necessário informar o CPF.");
 
             RuleFor(w => w.BirthDate).NotEmpty()
-                                     .WithMessage("A data de nascimento não pode ser vazia.")
+                                     .WithMessage("É necessário informar a data de nascimento.")
                                      .NotNull()
-                                     .WithMessage("A data de nascimento não pode ser nulo.");
+                                     .WithMessage("É necessário informar a data de nascimento.");
 
             RuleFor(w => w.Addresses.Count).LessThanOrEqualTo(0)
                                            .WithMessage("É necessário cadastrar pelo menos um endereço.");
+
+            RuleForEach(w => w.Addresses).SetValidator(new UserAddressValidator());
         }
     }
 }

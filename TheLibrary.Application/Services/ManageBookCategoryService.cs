@@ -10,13 +10,13 @@ using TheLibrary.Infrastructure.UnitOfWork;
 
 namespace TheLibrary.Application.Services
 {
-    public class ManagerBookCategoryService : IManagerBookCategoryService
+    public class ManageBookCategoryService : IManageBookCategoryService
     {
         private readonly LibraryContext _context;
         private readonly IMapper _mapper;
         private readonly IUnitOfWork _uow;
 
-        public ManagerBookCategoryService(LibraryContext context, IMapper mapper, IUnitOfWork uow)
+        public ManageBookCategoryService(LibraryContext context, IMapper mapper, IUnitOfWork uow)
         {
             _context = context;
             _mapper = mapper;
@@ -31,7 +31,11 @@ namespace TheLibrary.Application.Services
 
         public async Task Delete(Guid id)
         {
-            var entity = await _uow.Repository<BookCategory>(_context).Get(w => w.Id == id);
+            var entity = await _uow.Repository<BookCategory>(_context).Get(w => w.Id == id, new[] { "Books" });
+
+            if(entity.Books.Any()) 
+                throw new ApplicationException("A categoria possui livros e por isso não é possível excluí-la.");
+
             await _uow.Repository<BookCategory>(_context).Delete(entity);
         }
 

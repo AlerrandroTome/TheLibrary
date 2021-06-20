@@ -8,11 +8,11 @@ namespace TheLibrary.Api.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ManagerLoginController : ControllerBase
+    public class ManageLoginController : ControllerBase
     {
-        private readonly IManagerLoginService _service;
+        private readonly IManageLoginService _service;
 
-        public ManagerLoginController(IManagerLoginService service)
+        public ManageLoginController(IManageLoginService service)
         {
             _service = service;
         }

@@ -3,7 +3,7 @@ using TheLibrary.Core.Entities;
 
 namespace TheLibrary.Core.Interfaces
 {
-    public interface IManagerBookCategoryService : IBaseService<BookCategory, BookCategoryCreateDTO, BookCategoryUpdateDTO>
+    public interface IManageBookCategoryService : IBaseService<BookCategory, BookCategoryCreateDTO, BookCategoryUpdateDTO>
     {
     }
 }

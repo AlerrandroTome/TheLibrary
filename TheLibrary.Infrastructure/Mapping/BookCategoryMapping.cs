@@ -11,11 +11,16 @@ namespace TheLibrary.Infrastructure.Mapping
             builder.ToTable("BookCategory");
             builder.HasKey(w => w.Id);
 
-            builder.Property(w => w.Title).IsRequired().HasColumnType("varchar(100)");
-            builder.Property(w => w.InclusionDate).IsRequired().HasColumnType("datetime2");
-            builder.Property(w => w.Active).IsRequired().HasColumnType("bit");
+            builder.AddBaseMapping();
 
-            builder.Property(w => w.LastChangeDate).HasColumnType("datetime2");
+            builder.Property(w => w.Title)
+                   .IsRequired()
+                   .HasColumnType("varchar(100)");
+
+            builder.HasMany(w => w.Books)
+                   .WithOne(w => w.Category)
+                   .HasForeignKey(w => w.CategoryId)
+                   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

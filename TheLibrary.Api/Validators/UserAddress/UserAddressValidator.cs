@@ -8,19 +8,19 @@ namespace TheLibrary.Api.Validators.UserAddress
         public UserAddressValidator()
         {
             RuleFor(w => w.Address).NotEmpty()
-                                   .WithMessage("O Endereço não pode ser vazio.")
+                                   .WithMessage("É necessário informar o endereço.")
                                    .NotNull()
-                                   .WithMessage("O endereço não pode ser nulo.");
+                                   .WithMessage("É necessário informar o endereço.");
 
             RuleFor(w => w.IdentificationCode).NotNull()
-                                              .WithMessage("O CEP não pode ser nulo.")
+                                              .WithMessage("É necessário informar o CEP.")
                                               .NotEmpty()
-                                              .WithMessage("O CEP não pode ser vazio.");
+                                              .WithMessage("É necessário informar o CEP.");
 
             RuleFor(w => w.Number).NotNull()
-                                  .WithMessage("O número não pode ser nulo.")
+                                  .WithMessage("É necessário informar o número.")
                                   .NotEmpty()
-                                  .WithMessage("O número não pode ser vazio.");
+                                  .WithMessage("É necessário informar o número.");
         }
     }
 }

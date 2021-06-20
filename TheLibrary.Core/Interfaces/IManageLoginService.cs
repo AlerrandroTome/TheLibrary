@@ -3,7 +3,7 @@ using TheLibrary.Core.DTOs.Login;
 
 namespace TheLibrary.Core.Interfaces
 {
-    public interface IManagerLoginService
+    public interface IManageLoginService
     {
         Task<string> Login(LoginDTO credentials);
     }

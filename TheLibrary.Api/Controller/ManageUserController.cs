@@ -16,9 +16,9 @@ namespace TheLibrary.Api.Controller
     [Route("api/[controller]")]
     public class ManageUserController : ODataController, IControllerBase<UserCreateDTO, UserUpdateDTO>
     {
-        private readonly IManagerUserService _service;
+        private readonly IManageUserService _service;
 
-        public ManageUserController(IManagerUserService service)
+        public ManageUserController(IManageUserService service)
         {
             _service = service;
         }

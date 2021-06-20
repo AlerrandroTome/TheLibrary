@@ -14,11 +14,11 @@ namespace TheLibrary.Api.Controller
     [ApiExplorerSettings]
     [Route("api/[controller]")]
     [ODataRoutePrefix("BookCategory")]
-    public class ManagerBookCategoryController : ODataController, IControllerBase<BookCategoryCreateDTO, BookCategoryUpdateDTO>
+    public class ManageBookCategoryController : ODataController, IControllerBase<BookCategoryCreateDTO, BookCategoryUpdateDTO>
     {
-        private readonly IManagerBookCategoryService _service;
+        private readonly IManageBookCategoryService _service;
 
-        public ManagerBookCategoryController(IManagerBookCategoryService service)
+        public ManageBookCategoryController(IManageBookCategoryService service)
         {
             _service = service;
         }
@@ -29,7 +29,6 @@ namespace TheLibrary.Api.Controller
         virtual public IActionResult Get() => Ok(_service.Get());
 
         [HttpPost]
-        [AllowAnonymous]
         public async Task<IActionResult> Create(BookCategoryCreateDTO dto)
         {
             await _service.Create(dto);

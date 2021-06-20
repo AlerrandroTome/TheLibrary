@@ -10,9 +10,9 @@ namespace TheLibrary.Application.Validators.BookCategory
             RuleFor(w => w.Id).NotNull().NotNull();
 
             RuleFor(w => w.Title).NotNull()
-                                 .WithMessage("Titulo não pode ser nulo.")
+                                 .WithMessage("É necessário informar o titulo.")
                                  .NotEmpty()
-                                 .WithMessage("O titulo não pode ser vazio.")
+                                 .WithMessage("É necessário informar o titulo.")
                                  .Length(1, 100)
                                  .WithMessage("O titulo tem que ter entre {MinLength} e {MaxLength} caractere. Você digitou {TotalLength}");
         }

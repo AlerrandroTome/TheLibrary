@@ -11,16 +11,14 @@ namespace TheLibrary.Infrastructure.Mapping
             builder.ToTable("User");
             builder.HasKey(w => w.Id);
 
+            builder.AddBaseMapping();
+
             builder.Property(w => w.Login)
                    .HasColumnType("varchar(100)")
                    .IsRequired();
 
             builder.Property(w => w.Password)
                    .HasColumnType("varchar(8)")
-                   .IsRequired();
-
-            builder.Property(w => w.Active)
-                   .HasColumnType("bit")
                    .IsRequired();
 
             builder.Property(w => w.FirstName)
@@ -38,13 +36,6 @@ namespace TheLibrary.Infrastructure.Mapping
             builder.Property(w => w.BirthDate)
                    .HasColumnType("datetime2")
                    .IsRequired();
-
-            builder.Property(w => w.InclusionDate)
-                   .HasColumnType("datetime2")
-                   .IsRequired();
-
-            builder.Property(w => w.LastChangeDate)
-                   .HasColumnType("datetime2");
 
             builder.HasMany(w => w.Addresses)
                    .WithOne(w => w.User)

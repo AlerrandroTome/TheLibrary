@@ -13,13 +13,13 @@ using TheLibrary.Infrastructure.UnitOfWork;
 
 namespace TheLibrary.Application.Services
 {
-    public class ManagerUserService : IManagerUserService
+    public class ManageUserService : IManageUserService
     {
         private readonly LibraryContext _context;
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
 
-        public ManagerUserService(LibraryContext context, IUnitOfWork uow, IMapper mapper)
+        public ManageUserService(LibraryContext context, IUnitOfWork uow, IMapper mapper)
         {
             _context = context;
             _uow = uow;
