@@ -8,7 +8,6 @@ using TheLibrary.Core.DTOs.User;
 using TheLibrary.Core.Entities;
 using TheLibrary.Core.Interfaces;
 using TheLibrary.Infrastructure.Data.Context;
-using TheLibrary.Infrastructure.Entities;
 using TheLibrary.Infrastructure.UnitOfWork;
 
 namespace TheLibrary.Application.Services

@@ -16,10 +16,11 @@ namespace TheLibrary.Application.Services
         private readonly IMapper _mapper;
         private readonly IUnitOfWork _uow;
 
-        public ManageAuthorService(LibraryContext context, IMapper mapper)
+        public ManageAuthorService(LibraryContext context, IMapper mapper, IUnitOfWork uow)
         {
             _context = context;
             _mapper = mapper;
+            _uow = uow;
         }
 
         public async Task Create(AuthorCreateDTO dto)

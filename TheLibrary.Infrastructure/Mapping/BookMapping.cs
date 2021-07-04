@@ -17,11 +17,11 @@ namespace TheLibrary.Infrastructure.Mapping
                    .IsRequired()
                    .HasColumnType("varchar(100)");
 
-            builder.Property(w => w.ReleaseDate)
+            builder.Property(w => w.Resume)
                    .IsRequired()
                    .HasColumnType("varchar(700)");
 
-            builder.Property(w => w.Resume)
+            builder.Property(w => w.ReleaseDate)
                    .IsRequired()
                    .HasColumnType("datetime2");
 

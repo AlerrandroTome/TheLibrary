@@ -10,3 +10,15 @@ D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.C
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\ref\TheLibrary.Core.dll
 D:\Users\alerr\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.pdb
+C:\Projetos\TheLibrary\TheLibrary.Core\bin\Debug\net5.0\TheLibrary.Core.deps.json
+C:\Projetos\TheLibrary\TheLibrary.Core\bin\Debug\net5.0\TheLibrary.Core.dll
+C:\Projetos\TheLibrary\TheLibrary.Core\bin\Debug\net5.0\ref\TheLibrary.Core.dll
+C:\Projetos\TheLibrary\TheLibrary.Core\bin\Debug\net5.0\TheLibrary.Core.pdb
+C:\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.csprojAssemblyReference.cache
+C:\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.AssemblyInfoInputs.cache
+C:\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.AssemblyInfo.cs
+C:\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.csproj.CoreCompileInputs.cache
+C:\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.dll
+C:\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\ref\TheLibrary.Core.dll
+C:\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.pdb

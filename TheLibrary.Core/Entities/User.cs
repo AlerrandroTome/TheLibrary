@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using TheLibrary.Core.Entities;
 using TheLibrary.Core.Interfaces;
 
-namespace TheLibrary.Infrastructure.Entities
+namespace TheLibrary.Core.Entities
 {
     public class User : EntityBase, IODataEntity
     {

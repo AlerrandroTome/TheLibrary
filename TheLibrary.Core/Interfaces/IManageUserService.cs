@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using TheLibrary.Core.DTOs.User;
-using TheLibrary.Infrastructure.Entities;
+using TheLibrary.Core.Entities;
 
 namespace TheLibrary.Core.Interfaces
 {

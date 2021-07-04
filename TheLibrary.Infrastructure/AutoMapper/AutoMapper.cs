@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
+using TheLibrary.Core.DTOs.Author;
+using TheLibrary.Core.DTOs.Book;
 using TheLibrary.Core.DTOs.BookCategory;
 using TheLibrary.Core.DTOs.User;
 using TheLibrary.Core.DTOs.UserAddress;
 using TheLibrary.Core.Entities;
-using TheLibrary.Infrastructure.Entities;
 
 namespace TheLibrary.Infrastructure.AutoMapper
 {
@@ -13,6 +14,12 @@ namespace TheLibrary.Infrastructure.AutoMapper
         {
             CreateMap<BookCategory, BookCategoryCreateDTO>().ReverseMap();
             CreateMap<BookCategory, BookCategoryUpdateDTO>().ReverseMap();
+
+            CreateMap<Author, AuthorCreateDTO>().ReverseMap();
+            CreateMap<Author, AuthorUpdateDTO>().ReverseMap();
+
+            CreateMap<Book, BookCreateDTO>().ReverseMap();
+            CreateMap<Book, BookUpdateDTO>().ReverseMap();
 
             CreateMap<User, UserCreateDTO>().ForMember(p => p.Addresses, opt => opt.Ignore());
             CreateMap<UserCreateDTO, User>().ForMember(p => p.Addresses, opt => opt.Ignore());

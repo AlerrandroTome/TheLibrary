@@ -51,7 +51,7 @@ namespace TheLibrary.Api.Configurations
             var entities = AppDomain.CurrentDomain.GetAssemblies()
                                                   .SelectMany(w => w.GetTypes())
                                                   .Where(w => 
-                                                      w.FullName.Contains("TheLibrary.Domain.Entities") 
+                                                      w.FullName.Contains("TheLibrary.Core.Entities") 
                                                       && w.GetInterfaces().Any(w => w.Name.Equals(nameof(IODataEntity))) 
                                                       && !w.IsInterface 
                                                       && !w.IsAbstract

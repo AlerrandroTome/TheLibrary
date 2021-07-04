@@ -6610,11 +6610,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj",
       "projectName": "TheLibrary.Infrastructure",
-      "projectPath": "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj",
+      "projectPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\alerr\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\obj\\",
+      "outputPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6636,8 +6636,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj": {
-              "projectPath": "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj"
+            "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj": {
+              "projectPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj"
             }
           }
         }

@@ -1,4 +1,4 @@
-﻿using TheLibrary.Infrastructure.Entities;
+﻿using TheLibrary.Core.Entities;
 
 namespace TheLibrary.Core.Interfaces
 {

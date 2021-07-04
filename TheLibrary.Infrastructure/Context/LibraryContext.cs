@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TheLibrary.Core.Entities;
-using TheLibrary.Infrastructure.Entities;
 
 namespace TheLibrary.Infrastructure.Data.Context
 {

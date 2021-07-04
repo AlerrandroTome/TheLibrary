@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cz/buuoMoJPmhmt7+GI9Q7KNWTFM7JqB5yAd/8JjzaN9Pogjn21vpjUReL/4ZkLCYs9b/PjAdTu+eiWsAN8Gaw==",
+  "dgSpecHash": "qHKsTPsXPUo596SEuxYMC50EBm/g00QZGHA7gJlHuakNwxdcwMtTOn0zGZBZIKlN8kNP2CjYXECB2/JK/NEuZg==",
   "success": true,
-  "projectFilePath": "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj",
+  "projectFilePath": "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alerr\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\alerr\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

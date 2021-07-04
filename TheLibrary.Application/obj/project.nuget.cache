@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eKs0zVOHT9qCzobRflNTzwFWhAbayL1WsN257/TCdCorya8Cgitc/SKDCOS9s7W0775uU68BCTU3AgUR12ByxA==",
+  "dgSpecHash": "GXa7NYYCw31p4LdVK1J1+NwYRFn2EQiqJS/OXqOMC8wYkYHo9EMwE6lNYQz+xhJwezlbShN6naccMkC81lp4aQ==",
   "success": true,
-  "projectFilePath": "D:\\Users\\alerr\\Projetos\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj",
+  "projectFilePath": "C:\\Projetos\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alerr\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\alerr\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",

@@ -1,5 +1,4 @@
 ﻿using System;
-using TheLibrary.Infrastructure.Entities;
 
 namespace TheLibrary.Core.Entities
 {
