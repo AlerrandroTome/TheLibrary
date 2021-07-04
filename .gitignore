@@ -330,3 +330,4 @@ ASALocalRun/
 .mfractor/
 TheLibrary.Infrastructure/obj/Debug/net5.0/TheLibrary.Infrastructure.assets.cache
 *.cache
+*.cache
