@@ -6,6 +6,6 @@ namespace TheLibrary.Infrastructure.UnitOfWork
 {
     public interface IUnitOfWork
     {
-        IRepository<T> Repository<T>(DbContext context) where T : EntityBase;
+        IRepository<T> Repository<T>() where T : EntityBase;
     }
 }

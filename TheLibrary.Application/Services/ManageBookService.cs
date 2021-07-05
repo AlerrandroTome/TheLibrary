@@ -12,13 +12,11 @@ namespace TheLibrary.Application.Services
 {
     public class ManageBookService : IManageBookService
     {
-        private readonly LibraryContext _context;
         private readonly IMapper _mapper;
         private readonly IUnitOfWork _uow;
 
         public ManageBookService(LibraryContext context, IMapper mapper, IUnitOfWork uow)
         {
-            _context = context;
             _mapper = mapper;
             _uow = uow;
         }
@@ -26,25 +24,25 @@ namespace TheLibrary.Application.Services
         public async Task Create(BookCreateDTO dto)
         {
             var entity = _mapper.Map<Book>(dto);
-            await _uow.Repository<Book>(_context).Create(entity);
+            await _uow.Repository<Book>().Create(entity);
         }
 
         public async Task Delete(Guid id)
         {
-            var entity = await _uow.Repository<Book>(_context).Get(w => w.Id == id);
-            await _uow.Repository<Book>(_context).Delete(entity);
+            var entity = await _uow.Repository<Book>().Get(w => w.Id == id);
+            await _uow.Repository<Book>().Delete(entity);
         }
 
         public IQueryable<Book> Get()
         {
-            return _uow.Repository<Book>(_context).GetAll();
+            return _uow.Repository<Book>().GetAll();
         }
 
         public async Task<Book> Update(BookUpdateDTO dto)
         {
-            var entity = await _uow.Repository<Book>(_context).Get(w => w.Id == dto.Id);
+            var entity = await _uow.Repository<Book>().Get(w => w.Id == dto.Id);
             entity = _mapper.Map(dto, entity);
-            await _uow.Repository<Book>(_context).Update(entity);
+            await _uow.Repository<Book>().Update(entity);
             return entity;
         }
     }

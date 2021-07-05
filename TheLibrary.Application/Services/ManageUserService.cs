@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,29 +6,26 @@ using System.Threading.Tasks;
 using TheLibrary.Core.DTOs.User;
 using TheLibrary.Core.Entities;
 using TheLibrary.Core.Interfaces;
-using TheLibrary.Infrastructure.Data.Context;
 using TheLibrary.Infrastructure.UnitOfWork;
 
 namespace TheLibrary.Application.Services
 {
     public class ManageUserService : IManageUserService
     {
-        private readonly LibraryContext _context;
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
 
-        public ManageUserService(LibraryContext context, IUnitOfWork uow, IMapper mapper)
+        public ManageUserService(IUnitOfWork uow, IMapper mapper)
         {
-            _context = context;
             _uow = uow;
             _mapper = mapper;
         }
 
         public async Task BlockUser(Guid userId, Guid loggedUserId)
         {
-            var user = await _uow.Repository<User>(_context).Get(w => w.Id == userId);
+            var user = await _uow.Repository<User>().Get(w => w.Id == userId);
             user.Active = false;
-            await _uow.Repository<User>(_context).Update(user);
+            await _uow.Repository<User>().Update(user);
         }
 
         public async Task Create(UserCreateDTO dto)
@@ -43,26 +39,26 @@ namespace TheLibrary.Application.Services
                 entity.Addresses.Add(entityAddress);
             }
 
-            await _uow.Repository<User>(_context).Create(entity);
+            await _uow.Repository<User>().Create(entity);
         }
 
         public async Task Delete(Guid id)
         {
-            var entity = await _uow.Repository<User>(_context).Get(w => w.Id == id, new[] { "Addresses" });
+            var entity = await _uow.Repository<User>().Get(w => w.Id == id, new[] { "Addresses" });
 
-            _context.RemoveRange(entity.Addresses);
-            await _uow.Repository<User>(_context).Delete(entity);
+            await _uow.Repository<UserAddress>().DeleteRange(entity.Addresses.ToList());
+            await _uow.Repository<User>().Delete(entity);
         }
 
-        public IQueryable<User> Get() => _uow.Repository<User>(_context).GetAll();
+        public IQueryable<User> Get() => _uow.Repository<User>().GetAll();
 
         public async Task<User> Update(UserUpdateDTO dto)
         {
-            var entity = await _uow.Repository<User>(_context).Get(w => w.Id == dto.Id, new[] { "Addresses" });
+            var entity = await _uow.Repository<User>().Get(w => w.Id == dto.Id, new[] { "Addresses" });
 
             foreach (var address in entity.Addresses)
             {
-                _context.Remove(address);
+                await _uow.Repository<UserAddress>().Delete(address);
             }
 
             entity = _mapper.Map(dto, entity);
@@ -72,10 +68,10 @@ namespace TheLibrary.Application.Services
             {
                 var newEntity = _mapper.Map<UserAddress>(address);
                 newEntity.UserId = entity.Id;
-                _context.Add(newEntity);
+                await _uow.Repository<UserAddress>().Create(newEntity);
             }
 
-            await _uow.Repository<User>(_context).Update(entity);
+            await _uow.Repository<User>().Update(entity);
 
             return entity;
         }

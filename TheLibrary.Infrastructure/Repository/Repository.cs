@@ -1,22 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using TheLibrary.Core.Entities;
+using TheLibrary.Infrastructure.Data.Context;
 
 namespace TheLibrary.Infrastructure.Repository
 {
     public class Repository<T> : IRepository<T> where T : EntityBase
     {
-        private readonly DbContext _context;
+        private readonly LibraryContext _context;
 
-        public Repository(DbContext context)
+        public Repository(LibraryContext context)
         {
-            this._context = context;
+            _context = context;
         }
 
-        public async Task Create(T entity)
+        public async Task<T> Create(T entity)
         {
             if(_context != null)
             {
@@ -25,7 +27,10 @@ namespace TheLibrary.Infrastructure.Repository
 
                 _context.Add(entity);
                 await  _context.SaveChangesAsync();
+                
+                return entity;
             }
+            return null;
         }
 
         public async Task Delete(T entity)
@@ -33,6 +38,15 @@ namespace TheLibrary.Infrastructure.Repository
             if (_context != null)
             {
                 _context.Remove(entity);
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        public async Task DeleteRange(List<T> entities)
+        {
+            if(_context != null)
+            {
+                _context.RemoveRange(entities);
                 await _context.SaveChangesAsync();
             }
         }
