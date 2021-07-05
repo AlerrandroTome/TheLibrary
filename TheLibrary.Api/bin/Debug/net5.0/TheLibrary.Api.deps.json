@@ -2044,7 +2044,8 @@
       },
       "TheLibrary.Core/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0"
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.EntityFrameworkCore": "6.0.0-preview.1.21102.2"
         },
         "runtime": {
           "TheLibrary.Core.dll": {}

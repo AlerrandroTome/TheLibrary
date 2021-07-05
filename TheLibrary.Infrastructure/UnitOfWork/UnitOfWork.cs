@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using TheLibrary.Core.Entities;
+using TheLibrary.Infrastructure.Data.Context;
 using TheLibrary.Infrastructure.Repository;
 
 namespace TheLibrary.Infrastructure.UnitOfWork
@@ -9,8 +9,14 @@ namespace TheLibrary.Infrastructure.UnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
         protected Dictionary<Type, object> handlers;
+        private readonly LibraryContext context;
 
-        public IRepository<T> Repository<T>(DbContext context) where T : EntityBase
+        public UnitOfWork(LibraryContext context)
+        {
+            this.context = context;
+        }
+
+        public IRepository<T> Repository<T>() where T : EntityBase
         {
             var type = typeof(T);
 
