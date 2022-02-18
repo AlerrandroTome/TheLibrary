@@ -20,7 +20,7 @@ O projeto é uma web api em .net Core 5 que utiliza:
 
 
 # TheLibrary(English Version)
-A simple API on a library to practice the software architecture studies and structures of .Net Core 5.
+A simple API about a library to practice the software architecture studies and structures of .Net Core 5.
 Project under development.
 
 The project is a .net Core 5 web api that uses:  
