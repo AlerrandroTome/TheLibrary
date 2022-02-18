@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using TheLibrary.Core.DTOs.BookCategory;
+using TheLibrary.Core.DTOs.Response;
 using TheLibrary.Core.Entities;
 using TheLibrary.Core.Interfaces;
 using TheLibrary.Infrastructure.Data.Context;
@@ -23,30 +24,37 @@ namespace TheLibrary.Application.Services
             _uow = uow;
         }
 
-        public async Task Create(BookCategoryCreateDTO dto)
+        public async Task<Response<BookCategory>> Create(BookCategoryCreateDTO dto)
         {
             var entity = _mapper.Map<BookCategory>(dto);
-            await _uow.Repository<BookCategory>(_context).Create(entity);
+            var response = new Response<BookCategory>();
+            response.Data = await _uow.Repository<BookCategory>(_context).Create(entity);
+            return response;
         }
 
-        public async Task Delete(Guid id)
+        public async Task<Response<Guid>> Delete(Guid id)
         {
             var entity = await _uow.Repository<BookCategory>(_context).Get(w => w.Id == id, new[] { "Books" });
 
             if(entity.Books.Any()) 
-                throw new ApplicationException("A categoria possui livros e por isso não é possível excluí-la.");
+                throw new ApplicationException("There are books saved for this category, so it cannot be removed.");
 
             await _uow.Repository<BookCategory>(_context).Delete(entity);
+
+            var response = new Response<Guid>();
+            response.Data = entity.Id;
+            return response;
         }
 
         public IQueryable<BookCategory> Get() => _uow.Repository<BookCategory>(_context).GetAll();
 
-        public async Task<BookCategory> Update(BookCategoryUpdateDTO dto)
+        public async Task<Response<BookCategory>> Update(BookCategoryUpdateDTO dto)
         {
             var entity = await _uow.Repository<BookCategory>(_context).Get(w => w.Id == dto.Id);
             entity = _mapper.Map(dto, entity);
-            await _uow.Repository<BookCategory>(_context).Update(entity);
-            return entity;
+            var response = new Response<BookCategory>();
+            response.Data = await _uow.Repository<BookCategory>(_context).Update(entity);
+            return response;
         }
     }
 }

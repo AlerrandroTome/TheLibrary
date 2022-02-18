@@ -31,22 +31,22 @@ namespace TheLibrary.Api.Controller
         [HttpPost]
         public async Task<IActionResult> Create(BookCategoryCreateDTO dto)
         {
-            await _service.Create(dto);
-            return Ok();
+            var response = await _service.Create(dto);
+            return StatusCode(response.StatusCode, response);
         }
 
         [HttpPut]
         public async Task<IActionResult> Update(BookCategoryUpdateDTO dto)
         {
-            await _service.Update(dto);
-            return Ok();
+            var response = await _service.Update(dto);
+            return StatusCode(response.StatusCode, response);
         }
 
         [HttpDelete]
         public async Task<IActionResult> Delete(Guid id)
         {
-            await _service.Delete(id);
-            return Ok();
+            var response = await _service.Delete(id);
+            return StatusCode(response.StatusCode, response);
         }
     }
 }

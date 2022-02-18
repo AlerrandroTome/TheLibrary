@@ -5,9 +5,8 @@ namespace TheLibrary.Core.Entities
 {
     public class Author : EntityBase, IODataEntity
     {
-        //Criar no banco
         public string Name { get; set; }
 
-        public ICollection<Book> Books = new List<Book>();
+        public ICollection<Book> Books { get; set; } = new List<Book>();
     }
 }

@@ -17,7 +17,7 @@ namespace TheLibrary.Infrastructure.Mapping
                    .IsRequired()
                    .HasColumnType("varchar(100)");
 
-            builder.Property(w => w.Resume)
+            builder.Property(w => w.Summary)
                    .IsRequired()
                    .HasColumnType("varchar(700)");
 

@@ -27,15 +27,15 @@ namespace TheLibrary.Api.Controller
         [AllowAnonymous]
         public async Task<IActionResult> Create(UserCreateDTO dto)
         {
-            await _service.Create(dto);
-            return Ok();
+            var response = await _service.Create(dto);
+            return StatusCode(response.StatusCode, response);
         }
 
         [HttpDelete]
         public async Task<IActionResult> Delete(Guid id)
         {
-            await _service.Delete(id);
-            return Ok();
+            var response = await _service.Delete(id);
+            return StatusCode(response.StatusCode, response);
         }
 
         [HttpGet]
@@ -46,8 +46,8 @@ namespace TheLibrary.Api.Controller
         [HttpPut]
         public async Task<IActionResult> Update(UserUpdateDTO dto)
         {
-            var result = await _service.Update(dto);
-            return Ok(result);
+            var response = await _service.Update(dto);
+            return StatusCode(response.StatusCode, response);
         }
     }
 }

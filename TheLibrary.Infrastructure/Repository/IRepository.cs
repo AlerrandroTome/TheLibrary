@@ -8,8 +8,8 @@ namespace TheLibrary.Infrastructure.Repository
 {
     public interface IRepository<T> where T : EntityBase
     {
-        Task Create(T entity);
-        Task Update(T entity);
+        Task<T> Create(T entity);
+        Task<T> Update(T entity);
         Task Delete(T entity);
         Task<T> Get(Expression<Func<T, bool>> condiction, string[] includes = null);
         IQueryable<T> GetAll();

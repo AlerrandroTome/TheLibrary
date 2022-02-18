@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Linq;
 using System.Threading.Tasks;
+using TheLibrary.Core.DTOs.Response;
 
 namespace TheLibrary.Infrastructure.Middlewares
 {
@@ -12,12 +13,15 @@ namespace TheLibrary.Infrastructure.Middlewares
             if (!context.ModelState.IsValid)
             {
                 var errors = context.ModelState.Where(w => w.Value.Errors.Count > 0)
-                                              .ToDictionary(w => w.Key, w => w.Value.Errors.Select(w => w.ErrorMessage))
+                                              .Select(w => w.Value.Errors.Select(w => w.ErrorMessage))
                                               .ToList();
 
-                context.Result = new BadRequestObjectResult(new
+                context.Result = new BadRequestObjectResult(new Response<string>
                 {
-                    errors = errors.SelectMany(w => w.Value).ToList()
+                    StatusCode = 404,
+                    AnErrorOcurred = true,
+                    Data = null,
+                    ErrorMessage = string.Concat(errors)
                 });
 
                 return;

@@ -22,3 +22,15 @@ C:\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.csproj.C
 C:\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.dll
 C:\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\ref\TheLibrary.Core.dll
 C:\Projetos\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.pdb
+C:\Projects\TheLibrary\TheLibrary.Core\bin\Debug\net5.0\TheLibrary.Core.deps.json
+C:\Projects\TheLibrary\TheLibrary.Core\bin\Debug\net5.0\TheLibrary.Core.dll
+C:\Projects\TheLibrary\TheLibrary.Core\bin\Debug\net5.0\ref\TheLibrary.Core.dll
+C:\Projects\TheLibrary\TheLibrary.Core\bin\Debug\net5.0\TheLibrary.Core.pdb
+C:\Projects\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.csproj.AssemblyReference.cache
+C:\Projects\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.AssemblyInfoInputs.cache
+C:\Projects\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.AssemblyInfo.cs
+C:\Projects\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.csproj.CoreCompileInputs.cache
+C:\Projects\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.dll
+C:\Projects\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\ref\TheLibrary.Core.dll
+C:\Projects\TheLibrary\TheLibrary.Core\obj\Debug\net5.0\TheLibrary.Core.pdb

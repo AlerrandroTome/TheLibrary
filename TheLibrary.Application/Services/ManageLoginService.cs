@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using TheLibrary.Core.DTOs.Login;
+using TheLibrary.Core.DTOs.Response;
 using TheLibrary.Core.Entities;
 using TheLibrary.Core.Interfaces;
 using TheLibrary.Infrastructure.Data.Context;
@@ -21,14 +22,16 @@ namespace TheLibrary.Application.Services
             _tokenService = tokenService;
         }
 
-        public async Task<string> Login(LoginDTO credentials)
+        public async Task<Response<string>> Login(LoginDTO credentials)
         {
             //credentials.Password = credentials.Password.Atob();
             var user = await _uow.Repository<User>(_contexto).Get(w => w.Login.Equals(credentials.Login) && w.Password.Equals(credentials.Password));
             
             if (user != null)
             {
-                return _tokenService.GenerateToken(user);
+                var response = new Response<string>();
+                response.Data = _tokenService.GenerateToken(user);
+                return response;
             }
             else
             {

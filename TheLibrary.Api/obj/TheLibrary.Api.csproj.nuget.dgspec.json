@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\TheLibrary\\TheLibrary.Api\\TheLibrary.Api.csproj": {}
+    "C:\\Projects\\TheLibrary\\TheLibrary.Api\\TheLibrary.Api.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\TheLibrary\\TheLibrary.Api\\TheLibrary.Api.csproj": {
+    "C:\\Projects\\TheLibrary\\TheLibrary.Api\\TheLibrary.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\TheLibrary\\TheLibrary.Api\\TheLibrary.Api.csproj",
+        "projectUniqueName": "C:\\Projects\\TheLibrary\\TheLibrary.Api\\TheLibrary.Api.csproj",
         "projectName": "TheLibrary.Api",
-        "projectPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Api\\TheLibrary.Api.csproj",
-        "packagesPath": "C:\\Users\\alerr\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Api\\obj\\",
+        "projectPath": "C:\\Projects\\TheLibrary\\TheLibrary.Api\\TheLibrary.Api.csproj",
+        "packagesPath": "C:\\Users\\alerrandro_silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\TheLibrary\\TheLibrary.Api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\alerrandro_silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,21 +22,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/camedti/fd9ff057-bc68-4ec8-ba12-d92e971accad/_packaging/Intracore%40Release/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Projetos\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj": {
-                "projectPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj"
+              "C:\\Projects\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj": {
+                "projectPath": "C:\\Projects\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj"
               },
-              "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj": {
-                "projectPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj"
+              "C:\\Projects\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj": {
+                "projectPath": "C:\\Projects\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj"
               },
-              "C:\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj": {
-                "projectPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj"
+              "C:\\Projects\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj": {
+                "projectPath": "C:\\Projects\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj"
               }
             }
           }
@@ -120,25 +115,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj": {
+    "C:\\Projects\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj",
+        "projectUniqueName": "C:\\Projects\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj",
         "projectName": "TheLibrary.Application",
-        "projectPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj",
-        "packagesPath": "C:\\Users\\alerr\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Application\\obj\\",
+        "projectPath": "C:\\Projects\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj",
+        "packagesPath": "C:\\Users\\alerrandro_silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\TheLibrary\\TheLibrary.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\alerrandro_silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,18 +137,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/camedti/fd9ff057-bc68-4ec8-ba12-d92e971accad/_packaging/Intracore%40Release/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj": {
-                "projectPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj"
+              "C:\\Projects\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj": {
+                "projectPath": "C:\\Projects\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj"
               },
-              "C:\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj": {
-                "projectPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj"
+              "C:\\Projects\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj": {
+                "projectPath": "C:\\Projects\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj"
               }
             }
           }
@@ -196,25 +186,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj": {
+    "C:\\Projects\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj",
+        "projectUniqueName": "C:\\Projects\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj",
         "projectName": "TheLibrary.Core",
-        "projectPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj",
-        "packagesPath": "C:\\Users\\alerr\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\obj\\",
+        "projectPath": "C:\\Projects\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj",
+        "packagesPath": "C:\\Users\\alerrandro_silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\TheLibrary\\TheLibrary.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\alerrandro_silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -222,8 +208,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/camedti/fd9ff057-bc68-4ec8-ba12-d92e971accad/_packaging/Intracore%40Release/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -261,25 +246,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj": {
+    "C:\\Projects\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Projects\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj",
         "projectName": "TheLibrary.Infrastructure",
-        "projectPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\alerr\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Infrastructure\\obj\\",
+        "projectPath": "C:\\Projects\\TheLibrary\\TheLibrary.Infrastructure\\TheLibrary.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\alerrandro_silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\TheLibrary\\TheLibrary.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\alerrandro_silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -287,15 +268,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/camedti/fd9ff057-bc68-4ec8-ba12-d92e971accad/_packaging/Intracore%40Release/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj": {
-                "projectPath": "C:\\Projetos\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj"
+              "C:\\Projects\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj": {
+                "projectPath": "C:\\Projects\\TheLibrary\\TheLibrary.Core\\TheLibrary.Core.csproj"
               }
             }
           }
@@ -313,6 +293,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[10.1.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.0.1, )"
             },
             "Microsoft.AspNetCore.Mvc.Core": {
               "target": "Package",
@@ -356,7 +340,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -16,25 +16,22 @@ namespace TheLibrary.Infrastructure.Repository
             this._context = context;
         }
 
-        public async Task Create(T entity)
+        public async Task<T> Create(T entity)
         {
-            if(_context != null)
-            {
-                entity.InclusionDate = DateTime.Now;
-                entity.Active = true;
+            _ = _context ?? throw new ArgumentNullException(nameof(_context));
+            entity.InclusionDate = DateTime.Now;
+            entity.Active = true;
 
-                _context.Add(entity);
-                await  _context.SaveChangesAsync();
-            }
+            var result = _context.Add(entity);
+            await  _context.SaveChangesAsync();
+            return result.Entity;
         }
 
         public async Task Delete(T entity)
         {
-            if (_context != null)
-            {
-                _context.Remove(entity);
-                await _context.SaveChangesAsync();
-            }
+            _ = _context ?? throw new ArgumentNullException(nameof(_context));
+            _context.Remove(entity);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<T> Get(Expression<Func<T, bool>> condiction, string[] includes = null)
@@ -54,15 +51,14 @@ namespace TheLibrary.Infrastructure.Repository
             return _context.Set<T>().AsNoTracking().AsQueryable();
         }
 
-        public async Task Update(T entity)
+        public async Task<T> Update(T entity)
         {
-            if (_context != null)
-            {
-                entity.LastChangeDate = DateTime.Now;
-                _context.Update(entity);
+            _ = _context ?? throw new ArgumentNullException(nameof(_context));
+            entity.LastChangeDate = DateTime.Now;
+            var result = _context.Update(entity);
 
-                await _context.SaveChangesAsync();
-            }
+            await _context.SaveChangesAsync();
+            return result.Entity;
         }
     }
 }

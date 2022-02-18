@@ -18,6 +18,10 @@ namespace TheLibrary.Api.Controller
         }
 
         [HttpPost("Login")]
-        public async Task<IActionResult> Login(LoginDTO dto) => Ok(await _service.Login(dto));
+        public async Task<IActionResult> Login(LoginDTO dto) 
+        {
+            var response = await _service.Login(dto);
+            return StatusCode(response.StatusCode, response);
+        }
     }
 }

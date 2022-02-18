@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TheLibrary.Core.DTOs.Response;
 using TheLibrary.Core.DTOs.User;
 using TheLibrary.Core.Entities;
 using TheLibrary.Core.Interfaces;
@@ -25,14 +25,17 @@ namespace TheLibrary.Application.Services
             _mapper = mapper;
         }
 
-        public async Task BlockUser(Guid userId, Guid loggedUserId)
+        public async Task<Response<Guid>> BlockUser(Guid userId, Guid loggedUserId)
         {
             var user = await _uow.Repository<User>(_context).Get(w => w.Id == userId);
             user.Active = false;
             await _uow.Repository<User>(_context).Update(user);
+            var response = new Response<Guid>();
+            response.Data = userId;
+            return response;
         }
 
-        public async Task Create(UserCreateDTO dto)
+        public async Task<Response<User>> Create(UserCreateDTO dto)
         {
             var entity = _mapper.Map<User>(dto);
 
@@ -43,20 +46,25 @@ namespace TheLibrary.Application.Services
                 entity.Addresses.Add(entityAddress);
             }
 
-            await _uow.Repository<User>(_context).Create(entity);
+            var response = new Response<User>();
+            response.Data = await _uow.Repository<User>(_context).Create(entity);
+            return response;
         }
 
-        public async Task Delete(Guid id)
+        public async Task<Response<Guid>> Delete(Guid id)
         {
             var entity = await _uow.Repository<User>(_context).Get(w => w.Id == id, new[] { "Addresses" });
 
             _context.RemoveRange(entity.Addresses);
             await _uow.Repository<User>(_context).Delete(entity);
+            var response = new Response<Guid>();
+            response.Data = entity.Id;
+            return response;
         }
 
         public IQueryable<User> Get() => _uow.Repository<User>(_context).GetAll();
 
-        public async Task<User> Update(UserUpdateDTO dto)
+        public async Task<Response<User>> Update(UserUpdateDTO dto)
         {
             var entity = await _uow.Repository<User>(_context).Get(w => w.Id == dto.Id, new[] { "Addresses" });
 
@@ -75,9 +83,10 @@ namespace TheLibrary.Application.Services
                 _context.Add(newEntity);
             }
 
-            await _uow.Repository<User>(_context).Update(entity);
+            var response = new Response<User>();
+            response.Data = await _uow.Repository<User>(_context).Update(entity);
 
-            return entity;
+            return response;
         }
     }
 }

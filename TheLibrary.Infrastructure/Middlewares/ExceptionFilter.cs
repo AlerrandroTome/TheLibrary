@@ -1,7 +1,7 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Net;
+using TheLibrary.Core.DTOs.Response;
 
 namespace TheLibrary.Infrastructure.Middlewares
 {
@@ -9,9 +9,12 @@ namespace TheLibrary.Infrastructure.Middlewares
     {
         public void OnException(ExceptionContext context)
         {
-            context.Result = new JsonResult( new
+            context.Result = new JsonResult( new Response<string>
             {
-                Error = context.Exception.Message
+                StatusCode = 404,
+                AnErrorOcurred = true,
+                Data = null,
+                ErrorMessage = context.Exception.Message
             });
 
             context.HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;

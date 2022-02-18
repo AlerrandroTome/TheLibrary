@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using TheLibrary.Core.DTOs.Book;
+using TheLibrary.Core.DTOs.Response;
 using TheLibrary.Core.Entities;
 using TheLibrary.Core.Interfaces;
 using TheLibrary.Infrastructure.Data.Context;
@@ -23,16 +24,21 @@ namespace TheLibrary.Application.Services
             _uow = uow;
         }
 
-        public async Task Create(BookCreateDTO dto)
+        public async Task<Response<Book>> Create(BookCreateDTO dto)
         {
             var entity = _mapper.Map<Book>(dto);
-            await _uow.Repository<Book>(_context).Create(entity);
+            var response = new Response<Book>();
+            response.Data = await _uow.Repository<Book>(_context).Create(entity);
+            return response;
         }
 
-        public async Task Delete(Guid id)
+        public async Task<Response<Guid>> Delete(Guid id)
         {
             var entity = await _uow.Repository<Book>(_context).Get(w => w.Id == id);
             await _uow.Repository<Book>(_context).Delete(entity);
+            var response = new Response<Guid>();
+            response.Data = entity.Id;
+            return response;
         }
 
         public IQueryable<Book> Get()
@@ -40,12 +46,13 @@ namespace TheLibrary.Application.Services
             return _uow.Repository<Book>(_context).GetAll();
         }
 
-        public async Task<Book> Update(BookUpdateDTO dto)
+        public async Task<Response<Book>> Update(BookUpdateDTO dto)
         {
             var entity = await _uow.Repository<Book>(_context).Get(w => w.Id == dto.Id);
             entity = _mapper.Map(dto, entity);
-            await _uow.Repository<Book>(_context).Update(entity);
-            return entity;
+            var response = new Response<Book>();
+            response.Data = await _uow.Repository<Book>(_context).Update(entity);
+            return response;
         }
     }
 }
