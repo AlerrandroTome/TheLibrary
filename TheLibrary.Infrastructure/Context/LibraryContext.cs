@@ -12,6 +12,9 @@ namespace TheLibrary.Infrastructure.Data.Context
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<UserAddress> UserAddresses { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
+        public DbSet<BookRental> BookRentals { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

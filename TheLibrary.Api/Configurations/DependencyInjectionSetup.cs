@@ -15,6 +15,7 @@ namespace TheLibrary.Api.Configurations
             services.AddScoped<IManageBookService, ManageBookService>();
             services.AddScoped<IManageLoginService, ManageLoginService>();
             services.AddScoped<IManageUserService, ManageUserService>();
+            services.AddScoped<IManageRentalService, ManageRentalService>();
             services.AddScoped<ITokenService, TokenService>();
         }
     }

@@ -34,15 +34,15 @@ namespace TheLibrary.Application.Services
 
         public async Task<Response<Guid>> Delete(Guid id)
         {
-            var entity = await _uow.Repository<BookCategory>(_context).Get(w => w.Id == id, new[] { "Books" });
+            var entity = await _uow.Repository<BookCategory>(_context).Get(w => w.Id == id, new[] { "Books" }).ConfigureAwait(false);
 
             if(entity.Books.Any()) 
                 throw new ApplicationException("There are books saved for this category, so it cannot be removed.");
 
-            await _uow.Repository<BookCategory>(_context).Delete(entity);
+            await _uow.Repository<BookCategory>(_context).Delete(entity).ConfigureAwait(false);
 
             var response = new Response<Guid>();
-            response.Data = entity.Id;
+            response.Data = id;
             return response;
         }
 
@@ -50,10 +50,10 @@ namespace TheLibrary.Application.Services
 
         public async Task<Response<BookCategory>> Update(BookCategoryUpdateDTO dto)
         {
-            var entity = await _uow.Repository<BookCategory>(_context).Get(w => w.Id == dto.Id);
+            var entity = await _uow.Repository<BookCategory>(_context).Get(w => w.Id == dto.Id).ConfigureAwait(false);
             entity = _mapper.Map(dto, entity);
             var response = new Response<BookCategory>();
-            response.Data = await _uow.Repository<BookCategory>(_context).Update(entity);
+            response.Data = await _uow.Repository<BookCategory>(_context).Update(entity).ConfigureAwait(false);
             return response;
         }
     }

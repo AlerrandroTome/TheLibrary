@@ -28,13 +28,13 @@ namespace TheLibrary.Application.Services
         {
             var entity = _mapper.Map<Author>(dto);
             var response = new Response<Author>();
-            response.Data = await _uow.Repository<Author>(_context).Create(entity);
+            response.Data = await _uow.Repository<Author>(_context).Create(entity).ConfigureAwait(false);
             return response;
         }
 
         public async Task<Response<Guid>> Delete(Guid id)
         {
-            var entity = await _uow.Repository<Author>(_context).Get(w => w.Id == id, new[] { "Books" });
+            var entity = await _uow.Repository<Author>(_context).Get(w => w.Id == id, new[] { "Books" }).ConfigureAwait(false);
             var response = new Response<Guid>();
 
             if (entity.Books.Any())
@@ -42,7 +42,7 @@ namespace TheLibrary.Application.Services
 
             response.Data = id;
 
-            await _uow.Repository<Author>(_context).Delete(entity);
+            await _uow.Repository<Author>(_context).Delete(entity).ConfigureAwait(false);
 
             return response;
         }
@@ -54,10 +54,10 @@ namespace TheLibrary.Application.Services
 
         public async Task<Response<Author>> Update(AuthorUpdateDTO dto)
         {
-            var entity = await _uow.Repository<Author>(_context).Get(w => w.Id == dto.Id);
+            var entity = await _uow.Repository<Author>(_context).Get(w => w.Id == dto.Id).ConfigureAwait(false);
             var response = new Response<Author>();
             entity = _mapper.Map(dto, entity);
-            response.Data = await _uow.Repository<Author>(_context).Update(entity);
+            response.Data = await _uow.Repository<Author>(_context).Update(entity).ConfigureAwait(false);
             return response;
         }
     }

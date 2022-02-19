@@ -27,9 +27,9 @@ namespace TheLibrary.Application.Services
 
         public async Task<Response<Guid>> BlockUser(Guid userId, Guid loggedUserId)
         {
-            var user = await _uow.Repository<User>(_context).Get(w => w.Id == userId);
+            var user = await _uow.Repository<User>(_context).Get(w => w.Id == userId).ConfigureAwait(false);
             user.Active = false;
-            await _uow.Repository<User>(_context).Update(user);
+            await _uow.Repository<User>(_context).Update(user).ConfigureAwait(false);
             var response = new Response<Guid>();
             response.Data = userId;
             return response;
@@ -47,18 +47,18 @@ namespace TheLibrary.Application.Services
             }
 
             var response = new Response<User>();
-            response.Data = await _uow.Repository<User>(_context).Create(entity);
+            response.Data = await _uow.Repository<User>(_context).Create(entity).ConfigureAwait(false);
             return response;
         }
 
         public async Task<Response<Guid>> Delete(Guid id)
         {
-            var entity = await _uow.Repository<User>(_context).Get(w => w.Id == id, new[] { "Addresses" });
+            var entity = await _uow.Repository<User>(_context).Get(w => w.Id == id, new[] { "Addresses" }).ConfigureAwait(false);
 
             _context.RemoveRange(entity.Addresses);
-            await _uow.Repository<User>(_context).Delete(entity);
+            await _uow.Repository<User>(_context).Delete(entity).ConfigureAwait(false);
             var response = new Response<Guid>();
-            response.Data = entity.Id;
+            response.Data = id;
             return response;
         }
 
@@ -66,12 +66,9 @@ namespace TheLibrary.Application.Services
 
         public async Task<Response<User>> Update(UserUpdateDTO dto)
         {
-            var entity = await _uow.Repository<User>(_context).Get(w => w.Id == dto.Id, new[] { "Addresses" });
+            var entity = await _uow.Repository<User>(_context).Get(w => w.Id == dto.Id, new[] { "Addresses" }).ConfigureAwait(false);
 
-            foreach (var address in entity.Addresses)
-            {
-                _context.Remove(address);
-            }
+            _context.RemoveRange(entity.Addresses);
 
             entity = _mapper.Map(dto, entity);
             entity.Addresses = new List<UserAddress>();
@@ -84,7 +81,7 @@ namespace TheLibrary.Application.Services
             }
 
             var response = new Response<User>();
-            response.Data = await _uow.Repository<User>(_context).Update(entity);
+            response.Data = await _uow.Repository<User>(_context).Update(entity).ConfigureAwait(false);
 
             return response;
         }

@@ -37,7 +37,7 @@ namespace TheLibrary.Application.Services
             var entity = await _uow.Repository<Book>(_context).Get(w => w.Id == id);
             await _uow.Repository<Book>(_context).Delete(entity);
             var response = new Response<Guid>();
-            response.Data = entity.Id;
+            response.Data = id;
             return response;
         }
 

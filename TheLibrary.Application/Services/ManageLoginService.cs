@@ -25,7 +25,7 @@ namespace TheLibrary.Application.Services
         public async Task<Response<string>> Login(LoginDTO credentials)
         {
             //credentials.Password = credentials.Password.Atob();
-            var user = await _uow.Repository<User>(_contexto).Get(w => w.Login.Equals(credentials.Login) && w.Password.Equals(credentials.Password));
+            var user = await _uow.Repository<User>(_contexto).Get(w => w.Login.Equals(credentials.Login) && w.Password.Equals(credentials.Password)).ConfigureAwait(false);
             
             if (user != null)
             {
