@@ -19,7 +19,7 @@ namespace TheLibrary.Infrastructure.Mapping
             _ = builder.HasOne(o => o.User)
                        .WithMany()
                        .HasForeignKey(fk => fk.UserId)
-                       .OnDelete(DeleteBehavior.NoAction);
+                       .OnDelete(DeleteBehavior.Cascade);
 
             _ = builder.HasMany(m => m.Books)
                        .WithOne(o => o.Rental)

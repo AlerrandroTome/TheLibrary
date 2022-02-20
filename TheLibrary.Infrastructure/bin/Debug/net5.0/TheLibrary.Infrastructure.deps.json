@@ -9,7 +9,7 @@
       "TheLibrary.Infrastructure/1.0.0": {
         "dependencies": {
           "AutoMapper": "10.1.1",
-          "FluentValidation": "10.0.1",
+          "FluentValidation": "10.3.5",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
           "Microsoft.EntityFrameworkCore": "5.0.5",
@@ -54,11 +54,11 @@
           }
         }
       },
-      "FluentValidation/10.0.1": {
+      "FluentValidation/10.3.5": {
         "runtime": {
           "lib/net5.0/FluentValidation.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "10.0.1.0"
+            "fileVersion": "10.3.5.0"
           }
         }
       },
@@ -1334,12 +1334,12 @@
       "path": "castle.core/4.4.1",
       "hashPath": "castle.core.4.4.1.nupkg.sha512"
     },
-    "FluentValidation/10.0.1": {
+    "FluentValidation/10.3.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Nxf2U2JjcPy4vxZ4PzuyX32JcU7mB9oceXDyztGcAYmorAZD/fz513dschMzrgO1q7RRItaNtbqiTYtWCDRxfA==",
-      "path": "fluentvalidation/10.0.1",
-      "hashPath": "fluentvalidation.10.0.1.nupkg.sha512"
+      "sha512": "sha512-Mt2CnRqNA5+vXVNFY05yLuOG3OLYR7Q/ZcP/rcJZPNPbg95foVUruyQEmKl1GeXVnT2+u6rjGU2ZCdgF//QU2A==",
+      "path": "fluentvalidation/10.3.5",
+      "hashPath": "fluentvalidation.10.3.5.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

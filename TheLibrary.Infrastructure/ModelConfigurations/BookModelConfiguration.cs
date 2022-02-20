@@ -38,7 +38,7 @@ namespace TheLibrary.Infrastructure.Mapping
             _ = builder.HasMany(m => m.Rentals)
                        .WithOne(o => o.Book)
                        .HasForeignKey(fk => fk.BookId)
-                       .OnDelete(DeleteBehavior.NoAction);
+                       .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

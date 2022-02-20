@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,10 +28,25 @@ namespace TheLibrary.Application.Services
 
         public async Task<Response<Rental>> Create(RentalCreateDto dto)
         {
+            if(!dto.Books.Any())
+                throw new ApplicationException("It's necessary to inform at least one book.");
+
             var entity = _mapper.Map<Rental>(dto);
 
             foreach (var book in dto.Books)
             {
+                var bookUnavailable = await _context.BookRentals.AsNoTracking()
+                                                                .Select(s => new { s.Book.Title, s.BookId, s.Rental.StartDate, s.Rental.ReturnDate })
+                                                                .FirstOrDefaultAsync(b => b.BookId == book && 
+                                                                    ((b.StartDate <= dto.StartDate && b.ReturnDate >= dto.StartDate) || 
+                                                                    ((b.StartDate <= dto.ReturnDate && b.ReturnDate >= dto.ReturnDate)) ||
+                                                                    (dto.StartDate <= b.StartDate && dto.ReturnDate >= b.StartDate) ||
+                                                                    ((dto.StartDate <= b.ReturnDate && dto.ReturnDate >= b.ReturnDate)))).ConfigureAwait(false);
+
+                if (bookUnavailable is not null)
+                    throw new ApplicationException($"The book '{bookUnavailable.Title}' is unavailable for the requested " +
+                        $"date ({dto.StartDate.ToString("MM/dd/yyyy")} - {dto.ReturnDate.ToString("MM/dd/yyyy")}).");
+
                 var bookRental = new BookRental 
                 {
                     BookId = book,
@@ -60,19 +76,29 @@ namespace TheLibrary.Application.Services
 
         public async Task<Response<Rental>> Update(RentalUpdateDto dto)
         {
+            if (!dto.Books.Any())
+                throw new ApplicationException("It's necessary to inform at least one book.");
 
             var entity = await _uow.Repository<Rental>(_context).Get(g => g.Id == dto.Id, new[] { "Books" }).ConfigureAwait(false);
-            
-            if (entity.Books.Any()) // TODO remove when validator class is created
-            {
-                _context.BookRentals.RemoveRange(entity.Books);
-            }
 
+            _context.BookRentals.RemoveRange(entity.Books);
             entity = _mapper.Map(dto, entity);
             entity.Books = new List<BookRental>();
 
             foreach (var book in dto.Books)
             {
+                var bookUnavailable = await _context.BookRentals.AsNoTracking()
+                                                          .Select(s => new { s.Book.Title, s.BookId, s.Rental.StartDate, s.Rental.ReturnDate, s.RentalId })
+                                                          .FirstOrDefaultAsync(b => (b.BookId == book && b.RentalId != dto.Id) &&
+                                                               ((b.StartDate <= dto.StartDate && b.ReturnDate >= dto.StartDate) ||
+                                                               ((b.StartDate <= dto.ReturnDate && b.ReturnDate >= dto.ReturnDate)) ||
+                                                               (dto.StartDate <= b.StartDate && dto.ReturnDate >= b.StartDate) ||
+                                                               ((dto.StartDate <= b.ReturnDate && dto.ReturnDate >= b.ReturnDate)))).ConfigureAwait(false);
+
+                if (bookUnavailable is not null)
+                    throw new ApplicationException($"The book '{bookUnavailable.Title}' is unavailable for the requested " +
+                        $"date ({dto.StartDate.ToString("MM/dd/yyyy")} - {dto.ReturnDate.ToString("MM/dd/yyyy")}).");
+
                 var bookRental = new BookRental
                 {
                     BookId = book,

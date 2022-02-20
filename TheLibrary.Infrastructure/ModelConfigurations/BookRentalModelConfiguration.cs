@@ -14,12 +14,12 @@ namespace TheLibrary.Infrastructure.ModelConfigurations
             _ = builder.HasOne(o => o.Rental)
                        .WithMany(m => m.Books)
                        .HasForeignKey(fk => fk.RentalId)
-                       .OnDelete(DeleteBehavior.NoAction);
+                       .OnDelete(DeleteBehavior.Cascade);
 
             _ = builder.HasOne(o => o.Book)
                        .WithMany(m => m.Rentals)
                        .HasForeignKey(fk => fk.BookId)
-                       .OnDelete(DeleteBehavior.NoAction);
+                       .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

@@ -10,6 +10,6 @@ namespace TheLibrary.Core.DTOs.Rental
         public DateTime ReturnDate { get; set; }
         public Guid UserId { get; set; }
 
-        public ICollection<Guid> Books { get; set; }
+        public ICollection<Guid> Books { get; set; } = new List<Guid>();
     }
 }

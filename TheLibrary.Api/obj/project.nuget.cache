@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "tXmslqs2l1R2oUeqr0KaQ0YCZOmmcrSShWoN1Qws9cQCF6LSmZ/9D0w7Sxy6hv3Gk9ND8Yo/0lTyjhdMNF0B5w==",
+  "dgSpecHash": "6ZMnvDRcLA+H4sAB4nz0HD/odnipO0wjy8KregasAe+KGypfjN3Oq+jzNp15GNZz7dpXl0Mg/yUObfzhhebgUA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\TheLibrary\\TheLibrary.Api\\TheLibrary.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alerrandro_silva\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\alerrandro_silva\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\alerrandro_silva\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
-    "C:\\Users\\alerrandro_silva\\.nuget\\packages\\fluentvalidation\\10.0.1\\fluentvalidation.10.0.1.nupkg.sha512",
+    "C:\\Users\\alerrandro_silva\\.nuget\\packages\\fluentvalidation\\10.3.5\\fluentvalidation.10.3.5.nupkg.sha512",
     "C:\\Users\\alerrandro_silva\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.0.1\\fluentvalidation.aspnetcore.10.0.1.nupkg.sha512",
-    "C:\\Users\\alerrandro_silva\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.0.1\\fluentvalidation.dependencyinjectionextensions.10.0.1.nupkg.sha512",
+    "C:\\Users\\alerrandro_silva\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.5\\fluentvalidation.dependencyinjectionextensions.10.3.5.nupkg.sha512",
     "C:\\Users\\alerrandro_silva\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\alerrandro_silva\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\alerrandro_silva\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

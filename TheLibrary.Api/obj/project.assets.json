@@ -50,7 +50,7 @@
           "lib/netstandard1.5/Castle.Core.dll": {}
         }
       },
-      "FluentValidation/10.0.1": {
+      "FluentValidation/10.3.5": {
         "type": "package",
         "compile": {
           "lib/net5.0/FluentValidation.dll": {}
@@ -75,10 +75,10 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "FluentValidation.DependencyInjectionExtensions/10.0.1": {
+      "FluentValidation.DependencyInjectionExtensions/10.3.5": {
         "type": "package",
         "dependencies": {
-          "FluentValidation": "10.0.1",
+          "FluentValidation": "10.3.5",
           "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
         },
         "compile": {
@@ -2523,7 +2523,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "FluentValidation": "10.0.1",
+          "FluentValidation": "10.3.5",
           "System.IdentityModel.Tokens.Jwt": "6.10.2",
           "TheLibrary.Core": "1.0.0",
           "TheLibrary.Infrastructure": "1.0.0"
@@ -2553,7 +2553,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "AutoMapper": "10.1.1",
-          "FluentValidation": "10.0.1",
+          "FluentValidation": "10.3.5",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
           "Microsoft.EntityFrameworkCore": "5.0.5",
@@ -2625,18 +2625,21 @@
         "readme.txt"
       ]
     },
-    "FluentValidation/10.0.1": {
-      "sha512": "Nxf2U2JjcPy4vxZ4PzuyX32JcU7mB9oceXDyztGcAYmorAZD/fz513dschMzrgO1q7RRItaNtbqiTYtWCDRxfA==",
+    "FluentValidation/10.3.5": {
+      "sha512": "Mt2CnRqNA5+vXVNFY05yLuOG3OLYR7Q/ZcP/rcJZPNPbg95foVUruyQEmKl1GeXVnT2+u6rjGU2ZCdgF//QU2A==",
       "type": "package",
-      "path": "fluentvalidation/10.0.1",
+      "path": "fluentvalidation/10.3.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.10.0.1.nupkg.sha512",
+        "fluentvalidation.10.3.5.nupkg.sha512",
         "fluentvalidation.nuspec",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
         "lib/netstandard2.0/FluentValidation.dll",
         "lib/netstandard2.0/FluentValidation.xml",
         "lib/netstandard2.1/FluentValidation.dll",
@@ -2659,15 +2662,16 @@
         "lib/netcoreapp3.1/FluentValidation.AspNetCore.xml"
       ]
     },
-    "FluentValidation.DependencyInjectionExtensions/10.0.1": {
-      "sha512": "qGIoHrzN2J+J5TBLcxrYddtNJzYJqq/4DHiNWf/if33zCD0cY973forFoOUezDqBrBPxYy7OpiTcLeVrVzjBDw==",
+    "FluentValidation.DependencyInjectionExtensions/10.3.5": {
+      "sha512": "zGaFLXmf4c+kKqQpT0Ec1T97kbJMx9o25+0l6p/TYFQ99bHSLPmgpd8EjU6s7cXv9X/215mIlrazMkzvbCZFWg==",
       "type": "package",
-      "path": "fluentvalidation.dependencyinjectionextensions/10.0.1",
+      "path": "fluentvalidation.dependencyinjectionextensions/10.3.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.dependencyinjectionextensions.10.0.1.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.10.3.5.nupkg.sha512",
         "fluentvalidation.dependencyinjectionextensions.nuspec",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
@@ -8240,7 +8244,7 @@
     "net5.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "FluentValidation.AspNetCore >= 10.0.1",
-      "FluentValidation.DependencyInjectionExtensions >= 10.0.1",
+      "FluentValidation.DependencyInjectionExtensions >= 10.3.5",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.5",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 5.0.5",
       "Microsoft.AspNetCore.OData >= 7.5.7",
@@ -8313,7 +8317,7 @@
           },
           "FluentValidation.DependencyInjectionExtensions": {
             "target": "Package",
-            "version": "[10.0.1, )"
+            "version": "[10.3.5, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",

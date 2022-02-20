@@ -36,7 +36,7 @@
           "lib/netstandard1.5/Castle.Core.dll": {}
         }
       },
-      "FluentValidation/10.0.1": {
+      "FluentValidation/10.3.5": {
         "type": "package",
         "compile": {
           "lib/net5.0/FluentValidation.dll": {}
@@ -1973,7 +1973,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "AutoMapper": "10.1.1",
-          "FluentValidation": "10.0.1",
+          "FluentValidation": "10.3.5",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
           "Microsoft.EntityFrameworkCore": "5.0.5",
@@ -2032,18 +2032,21 @@
         "readme.txt"
       ]
     },
-    "FluentValidation/10.0.1": {
-      "sha512": "Nxf2U2JjcPy4vxZ4PzuyX32JcU7mB9oceXDyztGcAYmorAZD/fz513dschMzrgO1q7RRItaNtbqiTYtWCDRxfA==",
+    "FluentValidation/10.3.5": {
+      "sha512": "Mt2CnRqNA5+vXVNFY05yLuOG3OLYR7Q/ZcP/rcJZPNPbg95foVUruyQEmKl1GeXVnT2+u6rjGU2ZCdgF//QU2A==",
       "type": "package",
-      "path": "fluentvalidation/10.0.1",
+      "path": "fluentvalidation/10.3.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.10.0.1.nupkg.sha512",
+        "fluentvalidation.10.3.5.nupkg.sha512",
         "fluentvalidation.nuspec",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
         "lib/netstandard2.0/FluentValidation.dll",
         "lib/netstandard2.0/FluentValidation.xml",
         "lib/netstandard2.1/FluentValidation.dll",
@@ -6697,7 +6700,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "FluentValidation >= 10.0.1",
+      "FluentValidation >= 10.3.5",
       "System.IdentityModel.Tokens.Jwt >= 6.10.2",
       "TheLibrary.Core >= 1.0.0",
       "TheLibrary.Infrastructure >= 1.0.0"
@@ -6751,7 +6754,7 @@
         "dependencies": {
           "FluentValidation": {
             "target": "Package",
-            "version": "[10.0.1, )"
+            "version": "[10.3.5, )"
           },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",

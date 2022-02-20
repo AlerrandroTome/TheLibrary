@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NiFBbzJ5ndIJQm4Ng5TTqaLhKFfv/Fw//55kYtONA9ZBK2yW6/wGuhCGJIJv30Wy+ZaJT1YMhVOg+d6SI2ORTA==",
+  "dgSpecHash": "Taf9RWt8KPlgpsXyaFZJAhzIifZDw4wNofYmi3pCBF4VDcpq0YMFoP6zJpDcIZH79atN+Kfgc0Y0q8bMSEy0Dg==",
   "success": true,
   "projectFilePath": "C:\\Projects\\TheLibrary\\TheLibrary.Application\\TheLibrary.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alerrandro_silva\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\alerrandro_silva\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
-    "C:\\Users\\alerrandro_silva\\.nuget\\packages\\fluentvalidation\\10.0.1\\fluentvalidation.10.0.1.nupkg.sha512",
+    "C:\\Users\\alerrandro_silva\\.nuget\\packages\\fluentvalidation\\10.3.5\\fluentvalidation.10.3.5.nupkg.sha512",
     "C:\\Users\\alerrandro_silva\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\alerrandro_silva\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\alerrandro_silva\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
