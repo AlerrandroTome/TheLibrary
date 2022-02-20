@@ -84,6 +84,8 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+
+# Custom
 *.cache
 *.dll
 *.exe
