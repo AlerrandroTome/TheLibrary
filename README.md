@@ -38,3 +38,7 @@ The project is a .net Core 5 web api that uses:
 	- Swagger;  
 	- JWT Authentication;  
 	- Middleware to handle exceptions;  
+
+## Endpoints
+![image](https://github.com/AlerrandroTome/TheLibrary/assets/53446642/7df00185-2cf3-4178-a14a-acbb7003122e)
+![image](https://github.com/AlerrandroTome/TheLibrary/assets/53446642/497daae1-5d4d-495b-bdf6-f0dca2699566)
